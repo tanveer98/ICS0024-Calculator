@@ -14,6 +14,9 @@ public class CalculateController {
 
     @GetMapping
     public Long calculate_distance(@RequestParam(name = "values") List<Long> listOfParams) throws Exception {
+        if (listOfParams == null)
+            return 0L;
+
         List<Long> numbers = new ArrayList<>(listOfParams);
         numbers.sort(Long::compareTo);
         return calculate(numbers);
@@ -22,13 +25,19 @@ public class CalculateController {
     private Long calculate(List<Long> sortedValues) throws Exception {
         Long min = sortedValues.get(0);
         Long max = sortedValues.get(sortedValues.size() - 1);
-        Long result = max - min;
-        result *= result;
+        long result = max - min;
 
-        if(result >= Long.MAX_VALUE || result <= Long.MIN_VALUE)
-            throw new Exception();
-
-        return result;
+        if (is_overflowed(result)) {
+            System.out.println("result: " + result + " will overflow when squared!");
+            //throw new Exception();
+        }
+        return result * result;
 
     }
+
+    private boolean is_overflowed(Long result) throws Exception {
+        long threshold = (long) Math.sqrt(Long.MAX_VALUE);
+        return result > threshold;
+    }
+
 }

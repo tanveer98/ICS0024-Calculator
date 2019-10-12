@@ -8,5 +8,4 @@ public class CalculateControllerTest {
     // 3. Long.MAX + some other value throws exception
     // Tests for overflow/underflow of result.
     //
-
 }
