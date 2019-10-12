@@ -1,4 +1,4 @@
-package ee.taltech.team7.calculator.dto;
+package ee.taltech.team7.calculator.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RequestList {
+public class Request {
 
     private List<Long> integerList;
 

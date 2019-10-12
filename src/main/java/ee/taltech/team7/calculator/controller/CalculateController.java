@@ -13,17 +13,22 @@ import java.util.List;
 public class CalculateController {
 
     @GetMapping
-    public Long calculate_distance(@RequestParam(name = "values") List<Long> listOfParams) {
+    public Long calculate_distance(@RequestParam(name = "values") List<Long> listOfParams) throws Exception {
         List<Long> numbers = new ArrayList<>(listOfParams);
         numbers.sort(Long::compareTo);
         return calculate(numbers);
     }
 
-    private Long calculate(List<Long> sortedValues) {
+    private Long calculate(List<Long> sortedValues) throws Exception {
         Long min = sortedValues.get(0);
         Long max = sortedValues.get(sortedValues.size() - 1);
         Long result = max - min;
-        return result * result;
+        result *= result;
+
+        if(result >= Long.MAX_VALUE || result <= Long.MIN_VALUE)
+            throw new Exception();
+
+        return result;
 
     }
 }
