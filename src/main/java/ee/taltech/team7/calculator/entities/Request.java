@@ -5,15 +5,24 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@NoArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
 public class Request {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
+    Long minval;
+    Long maxVal;
 
-    private List<Long> integerList;
-
+   public Request(Long min, Long max) {
+        this.minval = min;
+        this.maxVal = max;
+    }
 
 }
