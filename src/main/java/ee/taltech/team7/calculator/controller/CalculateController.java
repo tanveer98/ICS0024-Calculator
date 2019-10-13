@@ -2,7 +2,7 @@ package ee.taltech.team7.calculator.controller;
 
 import ee.taltech.team7.calculator.entities.Request;
 import ee.taltech.team7.calculator.entities.Response;
-import ee.taltech.team7.calculator.exceptions.OverflowedLong;
+import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.repository.RequestRepo;
 import ee.taltech.team7.calculator.repository.ResponseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class CalculateController {
 
 
     @GetMapping
-    public Long calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) throws OverflowedLong {
+    public Long calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
         if (listOfParams == null)
             return 0L;
 
@@ -37,17 +37,21 @@ public class CalculateController {
         Long min = sortedVals.get(0);
         Long max = sortedVals.get(sortedVals.size() - 1);
         request = new Request(min, max);
-        calculate(request);
+        try {
+            calculate(request);
+        } catch (OverflowedLongException e) {
+            return -1L;
+        }
 
         return response.getSquaredVal();
     }
 
-    private void calculate(Request req) throws OverflowedLong {
+    private void calculate(Request req) throws OverflowedLongException {
         long result = req.getMaxVal() - req.getMinval();
 
         if (is_overflowed(result)) {
             System.out.println("result: " + result + " will overflow when squared!");
-            throw new OverflowedLong("Result will overflow when squared!");
+            throw new OverflowedLongException("Result will overflow when squared!");
         }
         response = new Response(result * result);
         response.getSquaredVal();
