@@ -3,8 +3,8 @@ package ee.taltech.team7.calculator.controller;
 import ee.taltech.team7.calculator.entities.Request;
 import ee.taltech.team7.calculator.entities.Response;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
-import ee.taltech.team7.calculator.repository.RequestRepo;
-import ee.taltech.team7.calculator.repository.ResponseRepo;
+import ee.taltech.team7.calculator.service.RequestService;
+import ee.taltech.team7.calculator.service.ResponseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,16 +19,20 @@ import java.util.List;
 @RequestMapping("/calculate")
 public class CalculateController {
     @Autowired
-    RequestRepo requestRepo;
+    RequestService requestService;
     @Autowired
-    ResponseRepo responseRepo;
+    ResponseService responseService;
 
     private Request request;
     private Response response;
+    static long itemCount = 0;
 
 
     @GetMapping
     public Long calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
+        itemCount = requestService.count(); //get the latest item count from the repository.
+        itemCount++;
+
         if (listOfParams == null)
             return 0L;
 
@@ -36,12 +40,18 @@ public class CalculateController {
         sortedVals.sort(Long::compareTo);
         Long min = sortedVals.get(0);
         Long max = sortedVals.get(sortedVals.size() - 1);
-        request = new Request(min, max);
+        request = new Request(itemCount,min,max);
         try {
             calculate(request);
         } catch (OverflowedLongException e) {
             return -1L;
         }
+
+        if(requestService.isNotExisting(request)) {
+            requestService.save(request);
+            responseService.save(response);
+        }
+
 
         return response.getSquaredVal();
     }
@@ -53,8 +63,8 @@ public class CalculateController {
             System.out.println("result: " + result + " will overflow when squared!");
             throw new OverflowedLongException("Result will overflow when squared!");
         }
-        response = new Response(result * result);
-        response.getSquaredVal();
+        response = new Response(itemCount,result * result);
+        //response.getSquaredVal();
     }
 
     private boolean is_overflowed(Long result) {
