@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  database:
+    image: postgres
+    restart: always
+    environment:
+        - POSTGRES_USER=not_root
+        - POSTGRES_PASSWORD=not_password
+        - POSTGRES_DB=calculatorLogs
+    ports:
+      - 54321:5432
