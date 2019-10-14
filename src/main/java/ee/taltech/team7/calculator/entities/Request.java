@@ -5,15 +5,26 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import javax.persistence.*;
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames ={"minVal","maxVal"}))
 public class Request {
+    @Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
+    @Column(name = "minVal")
+    Long minval;
+    @Column(name = "maxVal")
+    Long maxVal;
 
-    private List<Long> integerList;
-
+   public Request(Long min, Long max) {
+        this.minval = min;
+        this.maxVal = max;
+    }
 
 }
