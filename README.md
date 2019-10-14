@@ -1,7 +1,10 @@
 # **Calculator project for ICS0024**
-## Purpose of calculation
-
-## Requirement
+## Calculation requirement and logic
+### Task title : Square of a distance between min-max
+1. Inputted number hould be integer.
+2. Take absolute value of min and max.
+3. Square the absolute value and return a result.  
+## Requirement package and version
 | Package or software name | version |
 | -------------------------| ------- |
 | Java SDK|                   11.*
@@ -9,8 +12,11 @@
 
 ## Linux environment setup guide from zero
 ### 1. Setup Java 
-1.Download from Oracle official or apt command. NOTE: in apt , dot forget apt update
-2.Installation *.deb package: 
+1.Download from Oracle official or apt command. NOTE: in apt , do not forget apt update  
+```
+sudo apt install openjdk-11-jdk
+```
+The case if installation *.deb package from :https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
 ```
 dpkg install jdk-11.0.4_linux-x64_bin.deb
 ```
@@ -18,7 +24,7 @@ dpkg install jdk-11.0.4_linux-x64_bin.deb
 ```
 sudo apt install openjdk-11-jdk
 ```
-3.Verify installation 
+2.Verify installation 
 ```
 java --version
 ```
