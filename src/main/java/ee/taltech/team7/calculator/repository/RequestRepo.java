@@ -11,4 +11,6 @@ public interface RequestRepo extends JpaRepository<Request, Long> {
 
     @Query(value = "SELECT COUNT(id) FROM request where :param_min = min_val AND :param_max = max_val;", nativeQuery = true)
     public long findExisting(@Param("param_min") long min,@Param("param_max") long max);
+
+
 }

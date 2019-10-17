@@ -22,12 +22,12 @@ public class CalculateController {
     RequestService requestService;
     @Autowired
     ResponseService responseService;
-
     private Request request;
     private Response response;
     static long itemCount = 0;
 
 
+    /* GET REQUEST */
     @GetMapping
     public Long calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
         itemCount = requestService.count(); //get the latest item count from the repository.
@@ -71,5 +71,4 @@ public class CalculateController {
         long threshold = (long) Math.sqrt(Long.MAX_VALUE);
         return result > threshold;
     }
-
 }
