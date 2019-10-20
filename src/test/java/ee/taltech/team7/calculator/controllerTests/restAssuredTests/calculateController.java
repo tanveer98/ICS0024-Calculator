@@ -7,5 +7,4 @@ public class calculateController {
     // 2. Negative values work
     // 3. Positive values work
 
-
 }
