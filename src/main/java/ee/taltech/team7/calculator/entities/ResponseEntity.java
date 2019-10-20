@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@Table(name = "Response")
 public class ResponseEntity {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)

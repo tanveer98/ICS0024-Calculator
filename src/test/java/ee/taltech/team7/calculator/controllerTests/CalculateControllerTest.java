@@ -7,5 +7,5 @@ public class CalculateControllerTest {
     // 2. Long.MIN + some other value throws exception
     // 3. Long.MAX + some other value throws exception
     // Tests for overflow/underflow of result.
-    //
+
 }

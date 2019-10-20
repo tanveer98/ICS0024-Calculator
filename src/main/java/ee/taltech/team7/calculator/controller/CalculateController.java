@@ -32,8 +32,10 @@ public class CalculateController {
     /* GET REQUEST */
     @GetMapping
     public ResponseDTO calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
-        itemCount = requestService.count(); //get the latest item count from the repository.
-        itemCount++;
+        if(requestService != null) {
+            itemCount = requestService.count(); //get the latest item count from the repository.
+            itemCount++;
+        }
 
         if (listOfParams == null)
             return new ResponseDTO(0L);
