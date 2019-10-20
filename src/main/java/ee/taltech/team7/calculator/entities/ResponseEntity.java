@@ -12,14 +12,14 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-public class Response {
+public class ResponseEntity {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     @Column(unique = true)
     Long squaredVal;
 
-    public Response(Long val) {
+    public ResponseEntity(Long val) {
         this.squaredVal = val;
     }
 }

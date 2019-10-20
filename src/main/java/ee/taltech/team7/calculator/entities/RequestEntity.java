@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames ={"minVal","maxVal"}))
-public class Request {
+public class RequestEntity {
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
@@ -22,7 +22,7 @@ public class Request {
     @Column(name = "maxVal")
     Long maxVal;
 
-   public Request(Long min, Long max) {
+   public RequestEntity(Long min, Long max) {
         this.minval = min;
         this.maxVal = max;
     }

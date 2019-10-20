@@ -1,7 +1,8 @@
 package ee.taltech.team7.calculator.controller;
 
-import ee.taltech.team7.calculator.entities.Request;
-import ee.taltech.team7.calculator.entities.Response;
+import ee.taltech.team7.calculator.dto.ResponseDTO;
+import ee.taltech.team7.calculator.entities.RequestEntity;
+import ee.taltech.team7.calculator.entities.ResponseEntity;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.service.RequestService;
 import ee.taltech.team7.calculator.service.ResponseService;
@@ -22,48 +23,51 @@ public class CalculateController {
     RequestService requestService;
     @Autowired
     ResponseService responseService;
-    private Request request;
-    private Response response;
+
+    private RequestEntity requestEntity;
+    private ResponseEntity responseEntity;
     static long itemCount = 0;
 
 
     /* GET REQUEST */
     @GetMapping
-    public Long calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
+    public ResponseDTO calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
         itemCount = requestService.count(); //get the latest item count from the repository.
         itemCount++;
 
         if (listOfParams == null)
-            return 0L;
+            return new ResponseDTO(0L);
 
         List<Long> sortedVals = new ArrayList<>(listOfParams);
         sortedVals.sort(Long::compareTo);
+
         Long min = sortedVals.get(0);
         Long max = sortedVals.get(sortedVals.size() - 1);
-        request = new Request(itemCount,min,max);
+
+        requestEntity = new RequestEntity(itemCount,min,max);
         try {
-            calculate(request);
+            calculate(requestEntity);
         } catch (OverflowedLongException e) {
-            return -1L;
+            return new ResponseDTO(-1L);
         }
 
-        if(requestService.isNotExisting(request)) {
-            requestService.save(request);
-            responseService.save(response);
+        if(requestService.isNotExisting(requestEntity)) {
+            requestService.save(requestEntity);
+            responseService.save(responseEntity);
         }
 
 
-        return response.getSquaredVal();
+        return new ResponseDTO(responseEntity.getSquaredVal());
     }
 
-    private void calculate(Request req) throws OverflowedLongException {
+    private void calculate(RequestEntity req) throws OverflowedLongException {
         long result = req.getMaxVal() - req.getMinval();
 
         if (is_overflowed(result)) {
             System.out.println("result: " + result + " will overflow when squared!");
             throw new OverflowedLongException("Result will overflow when squared!");
         }
-        response = new Response(itemCount,result * result);
+        responseEntity = new ResponseEntity(itemCount,result * result);
         //response.getSquaredVal();
     }
 
