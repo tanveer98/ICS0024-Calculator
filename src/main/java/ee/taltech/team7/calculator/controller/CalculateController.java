@@ -49,7 +49,6 @@ public class CalculateController {
         requestEntity = new RequestEntity(itemCount,min,max);
 
         try {
-            param_check(max,min);
             calculate(requestEntity);
         } catch (OverflowedLongException e) {
             System.out.println(e.getMessage());
@@ -76,19 +75,10 @@ public class CalculateController {
     }
 
     private boolean is_overflowed(Long result) {
-        return result > threshold;
+        if(result > 0)
+            return result > threshold;
+        else
+            return result < -threshold;
     }
 
-    private void param_check(Long max, Long min) throws OverflowedLongException {
-        if(max >= threshold) {
-            if(min < 0) {
-                throw new OverflowedLongException("Result will overflow!");
-            }
-        }
-        if( min <= -threshold) {
-            if(max > 0) {
-                throw  new OverflowedLongException("Result will overflow!");
-            }
-        }
-    }
 }
