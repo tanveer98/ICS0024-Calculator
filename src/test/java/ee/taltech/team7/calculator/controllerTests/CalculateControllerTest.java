@@ -3,9 +3,12 @@ package ee.taltech.team7.calculator.controllerTests;
 import ee.taltech.team7.calculator.controller.CalculateController;
 import ee.taltech.team7.calculator.dto.ResponseDTO;
 import org.junit.Test;
+import springfox.documentation.swagger2.mappers.ModelMapper;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class CalculateControllerTest {
 
@@ -20,8 +23,8 @@ public class CalculateControllerTest {
         List<Long> numbers = new ArrayList<Long>();
         numbers.add((long)7);
         numbers.add((long)10);
-        c.calculate_distance(numbers);
-
+        ResponseDTO req = c.calculate_distance(numbers);
+        assertEquals(9, (long)req.squaredValue);
     }
 
     @Test
@@ -30,7 +33,8 @@ public class CalculateControllerTest {
         List<Long> numbers = new ArrayList<Long>();
         numbers.add((long)0);
         numbers.add((Long.MIN_VALUE));
-        c.calculate_distance(numbers);
+        ResponseDTO req = c.calculate_distance(numbers);
+        assertEquals(-1, (long)req.squaredValue);
     }
 
     @Test
@@ -39,6 +43,7 @@ public class CalculateControllerTest {
         List<Long> numbers = new ArrayList<Long>();
         numbers.add((long)0);
         numbers.add((Long.MAX_VALUE));
-        c.calculate_distance(numbers);
+        ResponseDTO req = c.calculate_distance(numbers);
+        assertEquals(-1, (long)req.squaredValue);
     }
 }
