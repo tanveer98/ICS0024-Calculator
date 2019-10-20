@@ -14,5 +14,31 @@ public class CalculateControllerTest {
     // 2. Long.MIN + some other value throws exception
     // 3. Long.MAX + some other value throws exception
     // Tests for overflow/underflow of result.
+    @Test
+    public void null_test(){
+        CalculateController c = new CalculateController();
+        List<Long> numbers = new ArrayList<Long>();
+        numbers.add((long)7);
+        numbers.add((long)10);
+        c.calculate_distance(numbers);
 
+    }
+
+    @Test
+    public void check_Min(){
+        CalculateController c = new CalculateController();
+        List<Long> numbers = new ArrayList<Long>();
+        numbers.add((long)0);
+        numbers.add((Long.MIN_VALUE));
+        c.calculate_distance(numbers);
+    }
+
+    @Test
+    public void check_Max(){
+        CalculateController c = new CalculateController();
+        List<Long> numbers = new ArrayList<Long>();
+        numbers.add((long)0);
+        numbers.add((Long.MAX_VALUE));
+        c.calculate_distance(numbers);
+    }
 }
