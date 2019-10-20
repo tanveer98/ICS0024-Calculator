@@ -13,7 +13,7 @@ import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/logs/response/")
+@RequestMapping("/logs/response")
 public class ResponseLogsController {
     @Autowired
     ResponseService responseService;

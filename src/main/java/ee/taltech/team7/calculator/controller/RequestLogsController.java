@@ -9,7 +9,7 @@ import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/logs/requests/")
+@RequestMapping("/logs/request")
 public class RequestLogsController {
     @Autowired
     RequestService requestService;
@@ -23,7 +23,6 @@ public class RequestLogsController {
     public RequestEntity get_request_by_id(@PathVariable Long id) throws EntityNotFoundException {
         return requestService.get_one_by_id(id);
     }
-
 
 
 }
