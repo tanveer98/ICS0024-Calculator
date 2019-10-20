@@ -2,6 +2,7 @@ package ee.taltech.team7.calculator.controller;
 
 
 import ee.taltech.team7.calculator.entities.ResponseEntity;
+import ee.taltech.team7.calculator.exceptions.ObjectNotFoundException;
 import ee.taltech.team7.calculator.service.ResponseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RestController
@@ -24,7 +24,7 @@ public class ResponseLogsController {
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity get_response_by_id(@PathVariable Long id) throws EntityNotFoundException {
+    public ResponseEntity get_response_by_id(@PathVariable Long id) throws ObjectNotFoundException {
         return responseService.get_one_by_id(id);
     }
 

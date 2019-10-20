@@ -1,6 +1,7 @@
 package ee.taltech.team7.calculator.service;
 
 import ee.taltech.team7.calculator.entities.ResponseEntity;
+import ee.taltech.team7.calculator.exceptions.ObjectNotFoundException;
 import ee.taltech.team7.calculator.repository.ResponseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class ResponseService {
     }
 
     public ResponseEntity get_one_by_id(Long id) {
-        return responseRepo.findById(id).orElseThrow(EntityNotFoundException::new);
+        return responseRepo.findById(id).orElseThrow(ObjectNotFoundException::new);
     }
 
 }
