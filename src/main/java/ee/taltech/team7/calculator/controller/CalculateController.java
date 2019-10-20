@@ -26,7 +26,8 @@ public class CalculateController {
 
     private RequestEntity requestEntity;
     private ResponseEntity responseEntity;
-    static long itemCount = 0;
+    private long threshold = (long) Math.sqrt(Long.MAX_VALUE);
+    private static long itemCount = 0;
 
 
     /* GET REQUEST */
@@ -45,19 +46,20 @@ public class CalculateController {
 
         Long min = sortedVals.get(0);
         Long max = sortedVals.get(sortedVals.size() - 1);
-
         requestEntity = new RequestEntity(itemCount,min,max);
+
         try {
+            param_check(max,min);
             calculate(requestEntity);
         } catch (OverflowedLongException e) {
+            System.out.println(e.getMessage());
             return new ResponseDTO(-1L);
         }
 
-        if(requestService.isNotExisting(requestEntity)) {
+        if(requestService != null && requestService.isNotExisting(requestEntity)) {
             requestService.save(requestEntity);
             responseService.save(responseEntity);
         }
-
 
         return new ResponseDTO(responseEntity.getSquaredVal());
     }
@@ -74,7 +76,19 @@ public class CalculateController {
     }
 
     private boolean is_overflowed(Long result) {
-        long threshold = (long) Math.sqrt(Long.MAX_VALUE);
         return result > threshold;
+    }
+
+    private void param_check(Long max, Long min) throws OverflowedLongException {
+        if(max >= threshold) {
+            if(min < 0) {
+                throw new OverflowedLongException("Result will overflow!");
+            }
+        }
+        if( min <= -threshold) {
+            if(max > 0) {
+                throw  new OverflowedLongException("Result will overflow!");
+            }
+        }
     }
 }

@@ -1,5 +1,12 @@
 package ee.taltech.team7.calculator.controllerTests;
 
+import ee.taltech.team7.calculator.controller.CalculateController;
+import ee.taltech.team7.calculator.dto.ResponseDTO;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CalculateControllerTest {
 
     //TODO: write 3 unit test for the controller itself
