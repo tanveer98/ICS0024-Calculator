@@ -39,4 +39,8 @@ dependencies {
     //runtime group: 'com.h2database', name: 'h2', version: '1.4.199'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-junit', version: '2.0.0.0'
+
+
 }

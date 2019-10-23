@@ -17,7 +17,6 @@ public class ResponseEntity {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    @Column(unique = true)
     Long squaredVal;
 
     public ResponseEntity(Long val) {

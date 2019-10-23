@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="Request",uniqueConstraints = @UniqueConstraint(columnNames ={"minVal","maxVal"}))
+@Table(name="Request")
 public class RequestEntity {
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)

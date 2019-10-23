@@ -49,6 +49,11 @@ Goto cloned repository directory and run docker in backgound
 sudo docker-compose up -d
 ```
 
+### 6. Lombok
+Install lombok plugin for intellij
+Then go to File > Setting > Compiler > Annotation processor > Enable annotation processing
+
+
 
 
 
