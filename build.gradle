@@ -4,6 +4,7 @@ plugins {
     id 'java'
 }
 
+
 group = 'ee.taltech.team7'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -27,6 +28,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    //implementation 'org.apache.maven.plugins:maven-invoker-plugin:3.2.1'
     //implementation group: 'com.oracle.jdbc', name: 'ojdbc8', version: '12.2.0.1'
     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
