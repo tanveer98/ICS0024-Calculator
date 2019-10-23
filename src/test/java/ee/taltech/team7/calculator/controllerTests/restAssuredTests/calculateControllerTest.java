@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.equalTo;
 //rest assured mvc tests for this controller
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class calculateController {
+public class calculateControllerTest {
     //TODO'S: Integration test using restAssured
     // 1. Same values return zero
     // 2. Negative values work
