@@ -3,6 +3,7 @@ package ee.taltech.team7.calculator.controller;
 import ee.taltech.team7.calculator.dto.ResponseDTO;
 import ee.taltech.team7.calculator.entities.RequestEntity;
 import ee.taltech.team7.calculator.entities.ResponseEntity;
+import ee.taltech.team7.calculator.exceptions.NullParameterException;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.service.RequestService;
 import ee.taltech.team7.calculator.service.ResponseService;
@@ -49,22 +50,22 @@ public class CalculateController {
             itemCount++;
         }
 
-        if (listOfParams == null)
-            return new ResponseDTO(0L);
+        if (listOfParams == null || listOfParams.size() == 0)
+            throw new NullParameterException(); //if no parameters were given throw an exception
 
         List<Long> sortedVals = new ArrayList<>(listOfParams);
-        sortedVals.sort(Long::compareTo);
+        try{
+            sortedVals.sort(Long::compareTo); //if there is any null value inside sort will throw an exception
+            long n = sortedVals.get(0); //if there is only one object which is null
+        } catch (NullPointerException e) {
+            throw new NullParameterException();
+        }
 
         Long min = sortedVals.get(0);
         Long max = sortedVals.get(sortedVals.size() - 1);
         requestEntity = new RequestEntity(itemCount,min,max);
+        calculate(requestEntity);
 
-        try {
-            calculate(requestEntity);
-        } catch (OverflowedLongException e) {
-            System.out.println(e.getMessage());
-            return new ResponseDTO(-1L);
-        }
 
         if(requestService != null && requestService.isNotExisting(requestEntity)) {
             requestService.save(requestEntity);
@@ -82,7 +83,6 @@ public class CalculateController {
             throw new OverflowedLongException("Result will overflow when squared!");
         }
         responseEntity = new ResponseEntity(itemCount,result * result);
-        //response.getSquaredVal();
     }
 
     private boolean is_overflowed(Long result) {

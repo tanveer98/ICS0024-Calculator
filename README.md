@@ -1,7 +1,7 @@
 # **Calculator project for ICS0024**
 ## Calculation requirement and logic
 ### Task title : Square of a distance between min-max
-1. Inputted number hould be integer.
+1. Inputted number should be integer.
 2. Take absolute value of min and max.
 3. Square the absolute value and return a result.  
 ## Requirement package and version

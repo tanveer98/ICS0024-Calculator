@@ -2,6 +2,8 @@ package ee.taltech.team7.calculator.controllerTests;
 
 import ee.taltech.team7.calculator.controller.CalculateController;
 import ee.taltech.team7.calculator.dto.ResponseDTO;
+import ee.taltech.team7.calculator.exceptions.NullParameterException;
+import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import org.junit.Test;
 import springfox.documentation.swagger2.mappers.ModelMapper;
 
@@ -17,33 +19,48 @@ public class CalculateControllerTest {
     // 2. Long.MIN + some other value throws exception
     // 3. Long.MAX + some other value throws exception
     // Tests for overflow/underflow of result.
-    @Test
+    @Test(expected = NullParameterException.class)
     public void null_test(){
         CalculateController c = new CalculateController();
-        List<Long> numbers = new ArrayList<Long>();
-        numbers.add((long)7);
-        numbers.add((long)10);
-        ResponseDTO req = c.calculate_distance(numbers);
-        assertEquals(9, (long)req.squaredValue);
+        c.calculate_distance(null);
     }
 
-    @Test
+    @Test(expected = NullParameterException.class)
+    public void null_list_with_one_element() {
+        CalculateController c = new CalculateController();
+        List<Long> n = new ArrayList<>();
+        n.add(null);
+        c.calculate_distance(n);
+
+    }
+
+
+    @Test(expected = NullParameterException.class)
+    public void null_list_with_multiple_element() {
+        CalculateController c = new CalculateController();
+        List<Long> n = new ArrayList<>();
+        n.add(100L);
+        n.add(null);
+        n.add(-70L);
+        c.calculate_distance(n);
+
+    }
+
+    @Test(expected = OverflowedLongException.class)
     public void check_Min(){
         CalculateController c = new CalculateController();
         List<Long> numbers = new ArrayList<Long>();
-        numbers.add((long)0);
+        numbers.add((long)2);
         numbers.add((Long.MIN_VALUE));
-        ResponseDTO req = c.calculate_distance(numbers);
-        assertEquals(-1, (long)req.squaredValue);
+        c.calculate_distance(numbers);
     }
 
-    @Test
+    @Test(expected = OverflowedLongException.class)
     public void check_Max(){
         CalculateController c = new CalculateController();
         List<Long> numbers = new ArrayList<Long>();
-        numbers.add((long)0);
+        numbers.add((long)-2);
         numbers.add((Long.MAX_VALUE));
-        ResponseDTO req = c.calculate_distance(numbers);
-        assertEquals(-1, (long)req.squaredValue);
+        c.calculate_distance(numbers);
     }
 }

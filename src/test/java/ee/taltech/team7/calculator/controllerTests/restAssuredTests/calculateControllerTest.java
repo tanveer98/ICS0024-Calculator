@@ -1,6 +1,7 @@
 package ee.taltech.team7.calculator.controllerTests.restAssuredTests;
 
 import io.restassured.RestAssured;
+import org.apache.http.HttpStatus;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,7 +38,7 @@ public class calculateControllerTest {
                 .get("/calculate?v=1,2,3,4,5,6")
                 .then()
                 .statusCode(200)
-                .body("squaredValue",equalTo(25));
+                .body("squaredValue", equalTo(25));
     }
 
     @Test
@@ -48,7 +49,7 @@ public class calculateControllerTest {
                 .get("/calculate?v=-1,-2,-3,-4,-5,-6")
                 .then()
                 .statusCode(200)
-                .body("squaredValue",equalTo(25));
+                .body("squaredValue", equalTo(25));
     }
 
     @Test
@@ -59,8 +60,24 @@ public class calculateControllerTest {
                 .get("/calculate?v=5,5,5,5,5")
                 .then()
                 .statusCode(200)
-                .body("squaredValue",equalTo(0));
+                .body("squaredValue", equalTo(0));
     }
 
+    @Test
+    public void overflowed_input_returns_bad_request() {
+        String url = "/calculate?v=";
+        url = url + Long.toString(Long.MAX_VALUE);
+        url += ",";
+        url += Long.toString(0);
+
+        System.out.println(url);
+
+        given()
+                .when()
+                .contentType("application/json")
+                .get(url)
+                .then()
+                .statusCode(HttpStatus.SC_BAD_REQUEST);
+    }
 
 }
