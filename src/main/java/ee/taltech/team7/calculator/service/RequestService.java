@@ -17,7 +17,7 @@ public class RequestService {
     @Autowired
     RequestRepo requestRepo;
 
-    @CachePut
+    @CachePut(cacheNames = {"Request"})
     public void save(RequestEntity r) {
         requestRepo.save(r);
     }
@@ -31,7 +31,7 @@ public class RequestService {
         return requestRepo.count();
     }
 
-    @Cacheable
+    @Cacheable(cacheNames = {"Request"})
     public List<RequestEntity> get_all() {
 //        try {
 //            Thread.sleep(3000);
@@ -41,7 +41,7 @@ public class RequestService {
         return requestRepo.findAll();
     }
 
-    @Cacheable
+    @Cacheable(cacheNames = {"Request"})
     public RequestEntity get_one_by_id(Long id) throws EntityNotFoundException {
 
         return requestRepo.findById(id).orElseThrow(EntityNotFoundException::new);

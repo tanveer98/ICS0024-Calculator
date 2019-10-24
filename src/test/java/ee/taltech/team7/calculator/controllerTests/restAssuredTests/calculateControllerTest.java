@@ -51,10 +51,15 @@ public class calculateControllerTest {
     @Test
     public void overflowed_input_returns_bad_request() {
 
-        String url = String.format("/calculate?v=%d,%d,%d",Long.MAX_VALUE,0,-2);
-        request(url,HttpStatus.SC_BAD_REQUEST,"status", HttpStatus.SC_BAD_REQUEST);
+        String url = String.format("/calculate?v=%d,%d,%d", Long.MAX_VALUE, 0, -2);
+        request(url, HttpStatus.SC_BAD_REQUEST, "status", HttpStatus.SC_BAD_REQUEST);
     }
 
+    @Test
+    public void null_parameter_returns_bad_request() {
+        String url = "/calculate?v=3,5,%00";
+        request(url, HttpStatus.SC_BAD_REQUEST, "status", HttpStatus.SC_BAD_REQUEST);
+    }
 
 
     public void request(String url, int statusCode, String jsonPath, int expectedValue) {
