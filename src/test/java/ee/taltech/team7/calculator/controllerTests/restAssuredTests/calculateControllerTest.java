@@ -9,7 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import java.text.Format;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -17,10 +18,6 @@ import static org.hamcrest.Matchers.equalTo;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class calculateControllerTest {
-    //TODO'S: Integration test using restAssured
-    // 1. Same values return zero
-    // 2. Negative values work
-    // 3. Positive values work
 
     @LocalServerPort
     int port;
@@ -32,52 +29,42 @@ public class calculateControllerTest {
 
     @Test
     public void positive_values_work() {
-        given()
-                .when()
-                .contentType("application/json")
-                .get("/calculate?v=1,2,3,4,5,6")
-                .then()
-                .statusCode(200)
-                .body("squaredValue", equalTo(25));
+        request("/calculate?v=1,2,3,4,5,6", HttpStatus.SC_OK,"squaredValue", 25);
     }
 
     @Test
     public void negative_values_work() {
-        given()
-                .when()
-                .contentType("application/json")
-                .get("/calculate?v=-1,-2,-3,-4,-5,-6")
-                .then()
-                .statusCode(200)
-                .body("squaredValue", equalTo(25));
+        request("/calculate?v=1,2,3,4,5", HttpStatus.SC_OK,"squaredValue", 16);
+
+    }
+
+    @Test
+    public void mixed_values_work() {
+        request("/calculate?v=-10,56,2,100", HttpStatus.SC_OK,"squaredValue", (110*110));
     }
 
     @Test
     public void same_values_return_zero() {
-        given()
-                .when()
-                .contentType("application/json")
-                .get("/calculate?v=5,5,5,5,5")
-                .then()
-                .statusCode(200)
-                .body("squaredValue", equalTo(0));
+        request("/calculate?v=5,5,5,5",HttpStatus.SC_OK,"squaredValue",0);
     }
 
     @Test
     public void overflowed_input_returns_bad_request() {
-        String url = "/calculate?v=";
-        url = url + Long.toString(Long.MAX_VALUE);
-        url += ",";
-        url += Long.toString(0);
 
-        System.out.println(url);
+        String url = String.format("/calculate?v=%d,%d,%d",Long.MAX_VALUE,0,-2);
+        request(url,HttpStatus.SC_BAD_REQUEST,"status", HttpStatus.SC_BAD_REQUEST);
+    }
 
+
+
+    public void request(String url, int statusCode, String jsonPath, int expectedValue) {
         given()
                 .when()
                 .contentType("application/json")
                 .get(url)
                 .then()
-                .statusCode(HttpStatus.SC_BAD_REQUEST);
-    }
+                .statusCode(statusCode)
+                .body(jsonPath,equalTo(expectedValue));
 
+    }
 }
