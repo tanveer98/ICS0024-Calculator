@@ -30,19 +30,6 @@ public class calculateControllerTest {
     }
 
     @Test
-    public void application_runs() {
-        String response = given()
-                .when()
-                .get("/")
-                .then()
-                .statusCode(200)
-                .assertThat()
-                .extract().body().asString();
-        assertEquals(response,"Greeting stranger");
-        assertNotEquals(response, "test");
-    }
-
-    @Test
     public void positive_values_work() {
         given()
                 .when()
