@@ -75,7 +75,7 @@ sudo docker-compose up -d
 ```
 
 2.View our langind page   
-http://http://localhost:40400/
+http://localhost:40400/
 
 
 3.Let's calculate   
