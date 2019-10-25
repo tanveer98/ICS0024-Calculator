@@ -1,9 +1,7 @@
 package ee.taltech.team7.calculator.controllerTests.mockitoTests;
 
 
-import ee.taltech.team7.calculator.entities.RequestEntity;
 import ee.taltech.team7.calculator.entities.ResponseEntity;
-import ee.taltech.team7.calculator.service.RequestService;
 import ee.taltech.team7.calculator.service.ResponseService;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;

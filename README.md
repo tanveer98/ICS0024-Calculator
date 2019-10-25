@@ -95,3 +95,9 @@ http://localhost:40400/calculate?v=10,20
 
 1.API documentation  
 http://localhost:40400/swagger
+
+## How to expand it:
+The core calculate method takes in a list of integers and finds the min-max values 
+and returns a ResponseDTO object (which is a wrapper around null).
+The consumers of the api can serialize the json object and get the value returned 
+by the calculate method from the squaredValue field.

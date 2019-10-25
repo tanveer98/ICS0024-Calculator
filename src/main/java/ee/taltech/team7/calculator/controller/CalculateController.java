@@ -7,7 +7,6 @@ import ee.taltech.team7.calculator.exceptions.NullParameterException;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.service.RequestService;
 import ee.taltech.team7.calculator.service.ResponseService;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,16 +1,12 @@
 package ee.taltech.team7.calculator.controllerTests.junitTest;
 
 import ee.taltech.team7.calculator.controller.CalculateController;
-import ee.taltech.team7.calculator.dto.ResponseDTO;
 import ee.taltech.team7.calculator.exceptions.NullParameterException;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import org.junit.Test;
-import springfox.documentation.swagger2.mappers.ModelMapper;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 public class CalculateControllerTest {
 
