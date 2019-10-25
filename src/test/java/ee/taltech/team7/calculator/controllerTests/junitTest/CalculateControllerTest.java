@@ -1,4 +1,4 @@
-package ee.taltech.team7.calculator.controllerTests;
+package ee.taltech.team7.calculator.controllerTests.junitTest;
 
 import ee.taltech.team7.calculator.controller.CalculateController;
 import ee.taltech.team7.calculator.dto.ResponseDTO;
