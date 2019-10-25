@@ -2,21 +2,28 @@
 ## Calculation requirement and logic
 ### Task title : Square of a distance between min-max
 1. Inputted number should be integer.
-2. Take absolute value of min and max.
+2. Take absolute value of min and max. (max - min)
 3. Square the absolute value and return a result.  
 
+### API Endpoints:
+    Calculator: /calculate?v={param1}&v={param2}...
+         
 ## Business logic    
 ### Acceptable / Designed inputs
-User enters several values in calculator page in GET request  
-example : /calculator?v=4,7  ---> returns 9  
-example : /calculator?v=10,-2, 0 ---> returns 144  
+User enters several values in calculator page in GET request 
+ 
+    example : localhost:40400/calculate?v=4,7  ---> returns 9  
+    example : localhost:40400/calculate?v=10,-2, 0 ---> returns 144  
+
 
 ### Exceeding assumptions
-Following inputations are out of design application reruens "bad request (HTTP 400)"  
-example : /calculator?v=  
-example : /calculator?v=1, ,10  
-example : /calculator?v=abc  
-example : /calculator?v=1, abc  
+Following inputations are out of design application returns "bad request (HTTP 400)"  
+    
+    example : localhost:40400/calculate?v=  
+    example : localhost:40400/calculate?v=1, ,10  
+    example : localhost:40400/calculate?v=abc  
+    example : localhost:40400/calculate?v=1, abc
+
 
 
 ## Requirement package and version
@@ -75,7 +82,7 @@ Then go to File > Setting > Compiler > Annotation processor > Enable annotation 
 sudo docker-compose up -d
 ```
 
-2.View our langind page   
+2.View our landing page   
 http://localhost:40400/
 
 
@@ -87,4 +94,4 @@ http://localhost:40400/calculate?v=10,20
 ## For developers 
 
 1.API documentation  
-http://localhost:40400/swagger-ui.html
+http://localhost:40400/swagger
