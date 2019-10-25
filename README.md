@@ -8,16 +8,17 @@
 ## Business logic    
 ### Acceptable / Designed inputs
 User enters several values in calculator page in GET request  
-example : /calculator?v=4,7
+example : /calculator?v=4,7  ---> returns 9  
+example : /calculator?v=10,-2, 0 ---> returns 144  
 
-### exceeding assumptions
-Following inoputations are out of design 
+### Exceeding assumptions
+Following inputations are out of design application reruens "bad request (HTTP 400)"  
 example : /calculator?v=  
 example : /calculator?v=1, ,10  
-example : /calculator?v=a  
+example : /calculator?v=abc  
+example : /calculator?v=1, abc  
 
 
-##Development
 ## Requirement package and version
 | Package or software name | version |
 | -------------------------| ------- |

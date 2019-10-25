@@ -63,4 +63,5 @@ public class CalculateControllerTest {
         numbers.add((Long.MAX_VALUE));
         c.calculate_distance(numbers);
     }
+
 }
