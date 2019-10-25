@@ -7,6 +7,8 @@ import ee.taltech.team7.calculator.exceptions.NullParameterException;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.service.RequestService;
 import ee.taltech.team7.calculator.service.ResponseService;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +23,7 @@ import java.util.List;
  * performing the calculation</p>
  */
 
-
+@Slf4j
 @RestController
 @RequestMapping("/calculate")
 public class CalculateController {
@@ -71,7 +73,7 @@ public class CalculateController {
             requestService.save(requestEntity);
             responseService.save(responseEntity);
         }
-
+        log.info("Input values max {} min {}, \t output value {}", max, min, responseEntity.getSquaredVal());
         return new ResponseDTO(responseEntity.getSquaredVal());
     }
 
