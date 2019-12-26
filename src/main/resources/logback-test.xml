@@ -1,0 +1,44 @@
+<configuration>
+
+    <!--    Define an appender class named STDOUT, specify the actual class to use,
+    (ConsoleAppender class means that it will "append" to the console"
+    and specify its operation parameters-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--    Define an appender class named rollingFileApp, specify the actual class to use,
+    and specify its operation parameters (like name, max size etc)-->
+
+    <appender name="rollingFileApp" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./LogFiles/log-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>3MB</maxFileSize>
+        </triggeringPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>[%d{HH:mm:ss}] [%level] - %message%n%xException</pattern>
+        </encoder>
+    </appender>
+
+<!--    Create a logger object using the rollingFileApp appender obj. Set its default level to info-->
+    <logger name="rollingFileLogger" level="INFO">
+        <appender-ref ref="rollingFileApp" />
+    </logger>
+<!--    Create a root logger object, specify its default level
+specify it to use STDOUT appender (aka console appender-->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+<!--        <appender-ref ref="rollingFile" />-->
+    </root>
+</configuration>

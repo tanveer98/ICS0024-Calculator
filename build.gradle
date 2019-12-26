@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
@@ -40,8 +41,9 @@ dependencies {
     //runtime group: 'com.h2database', name: 'h2', version: '1.4.199'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
     testCompile group: 'org.hamcrest', name: 'hamcrest-junit', version: '2.0.0.0'
-
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 
 }

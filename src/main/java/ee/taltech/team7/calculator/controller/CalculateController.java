@@ -1,5 +1,6 @@
 package ee.taltech.team7.calculator.controller;
 
+import ee.taltech.team7.calculator.CalculatorApplication;
 import ee.taltech.team7.calculator.dto.ResponseDTO;
 import ee.taltech.team7.calculator.entities.RequestEntity;
 import ee.taltech.team7.calculator.entities.ResponseEntity;
@@ -7,7 +8,6 @@ import ee.taltech.team7.calculator.exceptions.NullParameterException;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.service.RequestService;
 import ee.taltech.team7.calculator.service.ResponseService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 /**
  * <p>This class contains the controller methods for processing http requests and
  * performing the calculation</p>
  */
 
-@Slf4j
 @RestController
 @RequestMapping("/calculate")
 public class CalculateController {
@@ -46,6 +50,10 @@ public class CalculateController {
      */
     @GetMapping
     public ResponseDTO calculate_distance(@RequestParam(name = "v") List<Long> listOfParams) {
+//        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+//        StatusPrinter.print(lc);
+        Logger loger = LoggerFactory.getLogger("rollingFileLogger");
+
         if(requestService != null) {
             itemCount = requestService.count(); //get the latest item count from the repository.
             itemCount++;
@@ -72,7 +80,7 @@ public class CalculateController {
             requestService.save(requestEntity);
             responseService.save(responseEntity);
         }
-        log.info("Input values max {} min {}, \t output value {}", max, min, responseEntity.getSquaredVal());
+        loger.warn("Input values max {} min {}, output value {}", max, min, responseEntity.getSquaredVal());
         return new ResponseDTO(responseEntity.getSquaredVal());
     }
 
