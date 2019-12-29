@@ -30,7 +30,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '2.1.9.RELEASE'
-
     //implementation 'org.apache.maven.plugins:maven-invoker-plugin:3.2.1'
     //implementation group: 'com.oracle.jdbc', name: 'ojdbc8', version: '12.2.0.1'
 
@@ -38,7 +37,7 @@ dependencies {
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.7.1'
-
+    compile("org.springframework.boot:spring-boot-starter-actuator")
 
     //implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
 

@@ -7,7 +7,7 @@
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
-            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -27,18 +27,20 @@
             <level>DEBUG</level>
         </filter>
         <encoder>
-            <pattern>[%d{HH:mm:ss}] [%level] - %message%n%xException</pattern>
+            <pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-<!--    Create a logger object using the rollingFileApp appender obj. Set its default level to info-->
-    <logger name="rollingFileLogger" level="INFO">
-        <appender-ref ref="rollingFileApp" />
-    </logger>
-<!--    Create a root logger object, specify its default level
+<!--    Instantiate a logger object using the rollingFileApp appender obj. Set its default level to info-->
+<!--    <logger name="rollingFileLogger" level="INFO">-->
+<!--        <appender-ref ref="rollingFileApp" />-->
+<!--    </logger>-->
+
+<!--    Instaniate a root logger object, specify its default level
 specify it to use STDOUT appender (aka console appender-->
+
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
-<!--        <appender-ref ref="rollingFile" />-->
+        <appender-ref ref="rollingFileApp" />
     </root>
 </configuration>
