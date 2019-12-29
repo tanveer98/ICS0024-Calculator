@@ -28,5 +28,5 @@ deploy job:
   tags:
     - runner
   script:
-    - docker-compose up --build
+    - sudo docker-compose up --build
 
