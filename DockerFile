@@ -1,4 +1,4 @@
 FROM openjdk:11-jre-slim
 EXPOSE 40400
-ADD ./build/libs/calculator-0.0.1-SNAPSHOT.jar calculator-0.0.1-SNAPSHOT.jar
-ENTRYPOINT [ "java", "-jar", "calculator-0.0.1-SNAPSHOT.jar" ]
+ADD ./build/libs/calc.jar
+ENTRYPOINT [ "java", "-jar", "calc.jar" ]

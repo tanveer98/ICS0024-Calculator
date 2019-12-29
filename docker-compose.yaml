@@ -12,20 +12,20 @@ services:
     ports:
        - 54321:5432
 
-#  calculator:
-#    container_name: calculator
-#    hostname: calculator
-#    depends_on:
-#      - database
-#    links:
-#      - database
-#    ports:
-#      - 40400:40400
-#
-#    build:
-#      context: .
-#      dockerfile: DockerFile
-#
-  # links: 
-  #   - Database
-  #   - Calculator
+ calculator:
+   container_name: calculator
+   hostname: calculator
+   depends_on:
+     - database
+   links:
+     - database
+   ports:
+     - 40400:40400
+
+   build:
+     context: .
+     dockerfile: DockerFile
+
+  links: 
+    - Database
+    - Calculator
