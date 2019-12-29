@@ -1,7 +1,10 @@
 package ee.taltech.team7.calculator.serviceTests;
 
 import ee.taltech.team7.calculator.entities.RequestEntity;
+import ee.taltech.team7.calculator.exceptions.NullParameterException;
+import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
 import ee.taltech.team7.calculator.repository.RequestRepo;
+import ee.taltech.team7.calculator.service.CalculatorService;
 import ee.taltech.team7.calculator.service.RequestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 //test for this service
@@ -31,5 +37,6 @@ public class RequestServiceTest {
         assertTrue(is_not_existing);
 
     }
+
 
 }

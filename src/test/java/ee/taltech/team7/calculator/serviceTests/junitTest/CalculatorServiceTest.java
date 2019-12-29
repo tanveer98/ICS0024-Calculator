@@ -1,58 +1,58 @@
-package ee.taltech.team7.calculator.controllerTests.junitTest;
+package ee.taltech.team7.calculator.serviceTests.junitTest;
 
-import ee.taltech.team7.calculator.controller.CalculateController;
 import ee.taltech.team7.calculator.exceptions.NullParameterException;
 import ee.taltech.team7.calculator.exceptions.OverflowedLongException;
+import ee.taltech.team7.calculator.service.CalculatorService;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CalculateControllerTest {
+public  class CalculatorServiceTest {
 
     @Test(expected = NullParameterException.class)
     public void null_test(){
-        CalculateController c = new CalculateController();
-        c.calculate_distance(null);
+        var c = new CalculatorService();
+        c.sanitize_and_calculate(null);
     }
 
     @Test(expected = NullParameterException.class)
     public void null_list_with_one_element() {
-        CalculateController c = new CalculateController();
+        var c = new CalculatorService();
         List<Long> n = new ArrayList<>();
         n.add(null);
-        c.calculate_distance(n);
+        c.sanitize_and_calculate(n);
 
     }
 
 
     @Test(expected = NullParameterException.class)
     public void null_list_with_multiple_element() {
-        CalculateController c = new CalculateController();
+        var c = new CalculatorService();
         List<Long> n = new ArrayList<>();
         n.add(100L);
         n.add(null);
         n.add(-70L);
-        c.calculate_distance(n);
+        c.sanitize_and_calculate(n);
 
     }
 
     @Test(expected = OverflowedLongException.class)
     public void check_Min(){
-        CalculateController c = new CalculateController();
+        var c = new CalculatorService();
         List<Long> numbers = new ArrayList<Long>();
         numbers.add((long)2);
         numbers.add((Long.MIN_VALUE));
-        c.calculate_distance(numbers);
+        c.sanitize_and_calculate(numbers);
     }
 
     @Test(expected = OverflowedLongException.class)
     public void check_Max(){
-        CalculateController c = new CalculateController();
+        var c = new CalculatorService();
         List<Long> numbers = new ArrayList<Long>();
         numbers.add((long)-2);
         numbers.add((Long.MAX_VALUE));
-        c.calculate_distance(numbers);
+        c.sanitize_and_calculate(numbers);
     }
 
 }
