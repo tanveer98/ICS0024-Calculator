@@ -19,8 +19,12 @@ build job:
   stage: build
   tags:
     - runner
+  artifacts:
+    paths:
+      - build/libs
+
   script:
-    - ./gradlew assemble
+    - ./gradlew bootjar
 
 deploy job:
   stage: deploy
