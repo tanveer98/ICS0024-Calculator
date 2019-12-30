@@ -17,7 +17,8 @@ services:
     hostname: calculator
     depends_on:
       - database
-    links:  database
+    links:  
+      - database
     ports:
       - 40400:40400
 
