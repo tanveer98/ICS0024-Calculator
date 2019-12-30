@@ -19,6 +19,7 @@ public class calculateControllerTest {
 
     @LocalServerPort
     int port;
+    private String query = "/calculate?v=" ;
 
     @Before
     public void setUp() {
@@ -27,18 +28,18 @@ public class calculateControllerTest {
 
     @Test
     public void positive_values_work() {
-        request("/calculate?v=1,2,3,4,5,6", HttpStatus.SC_OK,"squaredValue", 25);
+        request(query+"=1,2,3,4,5,6", HttpStatus.SC_OK,"squaredValue", 25);
     }
 
     @Test
     public void negative_values_work() {
-        request("/calculate?v=1,2,3,4,5", HttpStatus.SC_OK,"squaredValue", 16);
+        request(query+"1,2,3,4,5", HttpStatus.SC_OK,"squaredValue", 16);
 
     }
 
     @Test
     public void mixed_values_work() {
-        request("/calculate?v=-10,56,2,100", HttpStatus.SC_OK,"squaredValue", (110*110));
+        request(query+"-10,56,2,100", HttpStatus.SC_OK,"squaredValue", (110*110));
     }
 
     @Test
@@ -49,13 +50,13 @@ public class calculateControllerTest {
     @Test
     public void overflowed_input_returns_bad_request() {
 
-        String url = String.format("/calculate?v=%d,%d,%d", Long.MAX_VALUE, 0, -2);
+        String url = String.format(query+"%d,%d,%d", Long.MAX_VALUE, 0, -2);
         request(url, HttpStatus.SC_BAD_REQUEST, "status", HttpStatus.SC_BAD_REQUEST);
     }
 
     @Test
     public void null_parameter_returns_bad_request() {
-        String url = "/calculate?v=3,5,%00";
+        String url = query+"=3,5,%00";
         request(url, HttpStatus.SC_BAD_REQUEST, "status", HttpStatus.SC_BAD_REQUEST);
     }
 
