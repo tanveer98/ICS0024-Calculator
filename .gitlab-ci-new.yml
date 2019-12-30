@@ -1,0 +1,40 @@
+---
+#this new file should run the runner on AWS server. 
+#after building, it will deploy the file to the azure server
+# it will then log in to the azure server and start the containers
+stages:
+  - test
+  - build
+  - deploy
+
+before_script:
+  - chmod +x ./gradlew
+
+test job:
+  stage: test
+  tags:
+    - runner
+  script:
+    - ./gradlew clean test
+
+build job:
+  stage: build
+  tags:
+    - runner
+  artifacts:
+    paths:
+      - build/libs
+  script:
+    - ./gradlew bootjar
+    - scp build/libs/calc.jar mhasan@65.52.229.255:~/api-deployment/build/libs/calc.jar
+    - scp DockerFile mhasan@65.52.229.255:~/api-deployment/DockerFile
+    - scp docker-compose.yaml mhasan@65.52.229.255:~/api-deployment/docker-compose.yaml
+
+
+deploy job:
+  stage: deploy
+  tags:
+    - runner
+  script:
+    - ssh mhasan@65.52.229.255
+    - sudo docker-compose up -d --build
