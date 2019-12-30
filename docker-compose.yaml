@@ -1,0 +1,29 @@
+---
+version: "3.3"
+services:
+  database:
+    container_name: database
+    hostname: database
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=not_root
+      - POSTGRES_PASSWORD=not_password
+      - POSTGRES_DB=calculatorLogs
+    ports:
+      - 54321:5432
+
+  calculator:
+    container_name: calculator
+    hostname: calculator
+    depends_on:
+      - database
+    links:  
+      - database
+    ports:
+      - 40400:40400
+    build:
+      context: .
+      dockerfile: DockerFile
+
+
