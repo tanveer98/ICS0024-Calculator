@@ -37,5 +37,6 @@ deploy job:
     - runner
   script:
     - ssh mhasan@65.52.229.255
+    - pwd
     - cd api-deployment/
     - sudo docker-compose up -d --build
