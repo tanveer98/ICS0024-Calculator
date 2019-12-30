@@ -1,0 +1,33 @@
+---
+stages:
+  - test
+  - build
+  - deploy
+
+before_script:
+  - pwd
+  - chmod +x ./gradlew
+
+test job:
+  stage: test
+  tags:
+    - runner
+  script:
+    - ./gradlew clean test
+
+build job:
+  stage: build
+  tags:
+    - runner
+  artifacts:
+    paths:
+      - build/libs
+  script:
+    - ./gradlew bootjar
+
+deploy job:
+  stage: deploy
+  tags:
+    - runner
+  script:
+    - sudo docker-compose up -d --build
