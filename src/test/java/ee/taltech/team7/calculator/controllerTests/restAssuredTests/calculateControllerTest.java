@@ -19,7 +19,7 @@ public class calculateControllerTest {
 
     @LocalServerPort
     int port;
-    private String query = "/calculate?v=" ;
+    private String query = "/c?v=" ;
 
     @Before
     public void setUp() {
@@ -44,7 +44,7 @@ public class calculateControllerTest {
 
     @Test
     public void same_values_return_zero() {
-        request("/calculate?v=5,5,5,5",HttpStatus.SC_OK,"squaredValue",0);
+        request(query+"5,5,5,5",HttpStatus.SC_OK,"squaredValue",0);
     }
 
     @Test

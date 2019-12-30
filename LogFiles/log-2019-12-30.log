@@ -12849,3 +12849,682 @@ select relname from pg_class where relkind='S' [42102-199]
 02:49:04.410 23027 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
 02:49:04.411 23028 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
 02:49:04.413 23030 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+14:56:47.754 531  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest], using SpringBootContextLoader
+14:56:47.763 540  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:56:47.764 541  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: calculateControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:56:47.914 691  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest
+14:56:48.075 852  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+14:56:48.101 878  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2663e964, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@48b67364, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@189cbd7c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7bf3a5d8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42e25b0b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@39b43d60, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@44be0077, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2205a05d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72ef8d15, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6aa8e115, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5e21e98f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51a9ad5e]
+14:56:48.660 1437 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Starting calculateControllerTest on loonix with PID 11691 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+14:56:48.662 1439 [main] INFO  e.t.t.c.c.r.calculateControllerTest - No active profile set, falling back to default profiles: default
+14:56:50.253 3030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+14:56:50.344 3121 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80ms. Found 2 repository interfaces.
+14:56:51.024 3801 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6b25541] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:56:51.110 3887 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8632a273] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:56:51.560 4337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+14:56:51.585 4362 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+14:56:51.609 4386 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:56:51.609 4386 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+14:56:51.737 4514 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:56:51.737 4514 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2779 ms
+14:56:52.690 5467 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:56:52.833 5610 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:56:52.918 5695 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:56:52.981 5758 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.12.Final}
+14:56:52.983 5760 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+14:56:53.111 5888 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+14:56:53.256 6033 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+14:56:53.895 6672 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@54d116d5'
+14:56:53.897 6674 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:56:54.718 7495 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:56:55.068 7845 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+14:56:55.365 8142 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:56:55.597 8374 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:56:56.389 9166 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+14:56:56.404 9181 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+14:56:56.438 9215 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+14:56:56.581 9358 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+14:56:56.591 9368 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+14:56:56.597 9374 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+14:56:56.599 9376 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+14:56:56.602 9379 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+14:56:56.606 9383 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+14:56:56.608 9385 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+14:56:56.610 9387 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+14:56:56.613 9390 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+14:56:56.615 9392 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+14:56:56.617 9394 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+14:56:56.619 9396 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+14:56:56.622 9399 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+14:56:56.624 9401 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+14:56:56.626 9403 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+14:56:56.628 9405 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+14:56:56.631 9408 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+14:56:56.634 9411 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+14:56:56.636 9413 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+14:56:56.638 9415 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+14:56:56.640 9417 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+14:56:56.642 9419 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+14:56:56.644 9421 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+14:56:56.656 9433 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+14:56:56.690 9467 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+14:56:56.747 9524 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 46147 (http) with context path ''
+14:56:56.751 9528 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Started calculateControllerTest in 8.573 seconds (JVM running for 9.896)
+14:56:57.600 10377 [http-nio-auto-1-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:56:57.601 10378 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:56:57.627 10404 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 26 ms
+14:56:57.714 10491 [http-nio-auto-1-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+14:56:57.910 10687 [http-nio-auto-1-exec-1] WARN  rollingFileLogger - Input values max 5 min 5, output value 0
+14:56:58.457 11234 [http-nio-auto-1-exec-3] WARN  rollingFileLogger - Input values max 6 min 1, output value 25
+14:56:58.497 11274 [http-nio-auto-1-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; nested exception is java.lang.NumberFormatException: For input string: "3,5,%00"]
+14:56:58.545 11322 [http-nio-auto-1-exec-5] WARN  rollingFileLogger - Input values max 100 min -10, output value 12100
+14:56:58.592 11369 [http-nio-auto-1-exec-6] WARN  rollingFileLogger - Input values max 5 min 1, output value 16
+14:56:58.615 11392 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:56:58.621 11398 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:56:58.624 11401 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:56:58.629 11406 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:57:40.794 330  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest], using SpringBootContextLoader
+14:57:40.799 335  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:57:40.799 335  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: calculateControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:57:40.907 443  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest
+14:57:41.021 557  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+14:57:41.042 578  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3fa247d1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2cb2fc20, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4f4c4b1a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@723e88f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f0fd5a0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64e7619d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@495ee280, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4fa1c212, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6ea2bc93, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3116c353, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@f627d13, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e928fbf]
+14:57:41.500 1036 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Starting calculateControllerTest on loonix with PID 11794 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+14:57:41.503 1039 [main] INFO  e.t.t.c.c.r.calculateControllerTest - No active profile set, falling back to default profiles: default
+14:57:43.179 2715 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+14:57:43.250 2786 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61ms. Found 2 repository interfaces.
+14:57:43.838 3374 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e4dbf8a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:57:43.922 3458 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$645c45da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:57:44.375 3911 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+14:57:44.400 3936 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+14:57:44.415 3951 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:57:44.416 3952 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+14:57:44.535 4071 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:57:44.535 4071 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2628 ms
+14:57:45.486 5022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:57:45.636 5172 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:57:45.707 5243 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:57:45.772 5308 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.12.Final}
+14:57:45.774 5310 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+14:57:45.893 5429 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+14:57:46.042 5578 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+14:57:46.643 6179 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4a5eb613'
+14:57:46.645 6181 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:57:47.481 7017 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:57:47.869 7405 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+14:57:48.190 7726 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+14:57:48.432 7968 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:57:49.224 8760 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+14:57:49.238 8774 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+14:57:49.274 8810 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+14:57:49.481 9017 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+14:57:49.491 9027 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+14:57:49.495 9031 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+14:57:49.498 9034 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+14:57:49.501 9037 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+14:57:49.503 9039 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+14:57:49.505 9041 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+14:57:49.508 9044 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+14:57:49.510 9046 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+14:57:49.512 9048 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+14:57:49.515 9051 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+14:57:49.517 9053 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+14:57:49.519 9055 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+14:57:49.522 9058 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+14:57:49.524 9060 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+14:57:49.529 9065 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+14:57:49.532 9068 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+14:57:49.534 9070 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+14:57:49.536 9072 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+14:57:49.538 9074 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+14:57:49.540 9076 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+14:57:49.542 9078 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+14:57:49.544 9080 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+14:57:49.556 9092 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+14:57:49.598 9134 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+14:57:49.621 9157 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 44219 (http) with context path ''
+14:57:49.625 9161 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Started calculateControllerTest in 8.535 seconds (JVM running for 9.53)
+14:57:50.430 9966 [http-nio-auto-1-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:57:50.432 9968 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:57:50.449 9985 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+14:57:50.522 10058 [http-nio-auto-1-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+14:57:50.705 10241 [http-nio-auto-1-exec-1] WARN  rollingFileLogger - Input values max 6 min 1, output value 25
+14:57:51.163 10699 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:57:51.168 10704 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:57:51.171 10707 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:57:51.177 10713 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:07:04.266 415  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest], using SpringBootContextLoader
+15:07:04.272 421  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:07:04.273 422  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: calculateControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:07:04.411 560  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest
+15:07:04.537 686  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:07:04.558 707  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2663e964, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@48b67364, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@189cbd7c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7bf3a5d8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42e25b0b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@39b43d60, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@44be0077, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2205a05d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72ef8d15, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6aa8e115, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5e21e98f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51a9ad5e]
+15:07:05.082 1231 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Starting calculateControllerTest on loonix with PID 12490 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:07:05.085 1234 [main] INFO  e.t.t.c.c.r.calculateControllerTest - No active profile set, falling back to default profiles: default
+15:07:06.973 3122 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:07:07.084 3233 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98ms. Found 2 repository interfaces.
+15:07:07.860 4009 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7f7f36e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:07:07.970 4119 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$feff8414] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:07:08.524 4673 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+15:07:08.547 4696 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+15:07:08.570 4719 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:07:08.570 4719 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+15:07:08.712 4861 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:07:08.712 4861 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3127 ms
+15:07:09.756 5905 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:07:09.903 6052 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:07:09.980 6129 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:07:10.048 6197 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.12.Final}
+15:07:10.049 6198 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+15:07:10.169 6318 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+15:07:10.314 6463 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:07:10.960 7109 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@54d116d5'
+15:07:10.963 7112 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:07:11.911 8060 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:07:12.328 8477 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:07:12.662 8811 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:07:12.926 9075 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:07:13.782 9931 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:07:13.795 9944 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:07:13.827 9976 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:07:14.018 10167 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:07:14.033 10182 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:07:14.038 10187 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:07:14.041 10190 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:07:14.043 10192 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:07:14.046 10195 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:07:14.049 10198 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:07:14.052 10201 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:07:14.055 10204 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:07:14.058 10207 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:07:14.060 10209 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:07:14.063 10212 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:07:14.067 10216 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:07:14.070 10219 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:07:14.072 10221 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:07:14.075 10224 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:07:14.081 10230 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:07:14.084 10233 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:07:14.087 10236 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:07:14.090 10239 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:07:14.093 10242 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:07:14.095 10244 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:07:14.098 10247 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:07:14.113 10262 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:07:14.146 10295 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+15:07:14.201 10350 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 46039 (http) with context path ''
+15:07:14.206 10355 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Started calculateControllerTest in 9.575 seconds (JVM running for 10.698)
+15:07:15.193 11342 [http-nio-auto-1-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:07:15.194 11343 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:07:15.213 11362 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+15:07:15.503 11652 [http-nio-auto-1-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+15:07:16.045 12194 [http-nio-auto-1-exec-3] WARN  rollingFileLogger - Input values max 6 min 1, output value 25
+15:07:16.094 12243 [http-nio-auto-1-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; nested exception is java.lang.NumberFormatException: For input string: "3,5,%00"]
+15:07:16.136 12285 [http-nio-auto-1-exec-5] WARN  rollingFileLogger - Input values max 100 min -10, output value 12100
+15:07:16.178 12327 [http-nio-auto-1-exec-6] WARN  rollingFileLogger - Input values max 5 min 1, output value 16
+15:07:16.206 12355 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:07:16.212 12361 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:07:16.215 12364 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:07:16.221 12370 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:07:45.360 397  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest], using SpringBootContextLoader
+15:07:45.367 404  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:07:45.368 405  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: calculateControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:07:45.490 527  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest
+15:07:45.605 642  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:07:45.624 661  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3fa247d1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2cb2fc20, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4f4c4b1a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@723e88f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f0fd5a0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64e7619d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@495ee280, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4fa1c212, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6ea2bc93, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3116c353, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@f627d13, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e928fbf]
+15:07:46.051 1088 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Starting calculateControllerTest on loonix with PID 12605 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:07:46.053 1090 [main] INFO  e.t.t.c.c.r.calculateControllerTest - No active profile set, falling back to default profiles: default
+15:07:47.690 2727 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:07:47.767 2804 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67ms. Found 2 repository interfaces.
+15:07:48.335 3372 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2e254119] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:07:48.423 3460 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ada58e4b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:07:48.894 3931 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+15:07:48.919 3956 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+15:07:48.942 3979 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:07:48.942 3979 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+15:07:49.078 4115 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:07:49.079 4116 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2662 ms
+15:07:50.083 5120 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:07:50.236 5273 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:07:50.302 5339 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:07:50.356 5393 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.12.Final}
+15:07:50.357 5394 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+15:07:50.477 5514 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+15:07:50.619 5656 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:07:51.248 6285 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@14af9f51'
+15:07:51.250 6287 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:07:52.111 7148 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:07:52.503 7540 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:07:52.781 7818 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:07:53.006 8043 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:07:53.898 8935 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:07:53.913 8950 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:07:53.953 8990 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:07:54.116 9153 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:07:54.157 9194 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:07:54.162 9199 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:07:54.165 9202 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:07:54.167 9204 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:07:54.170 9207 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:07:54.172 9209 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:07:54.174 9211 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:07:54.177 9214 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:07:54.179 9216 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:07:54.182 9219 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:07:54.185 9222 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:07:54.187 9224 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:07:54.190 9227 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:07:54.192 9229 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:07:54.194 9231 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:07:54.198 9235 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:07:54.200 9237 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:07:54.202 9239 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:07:54.204 9241 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:07:54.206 9243 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:07:54.209 9246 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:07:54.211 9248 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:07:54.222 9259 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:07:54.246 9283 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+15:07:54.267 9304 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 35735 (http) with context path ''
+15:07:54.270 9307 [main] INFO  e.t.t.c.c.r.calculateControllerTest - Started calculateControllerTest in 8.588 seconds (JVM running for 9.687)
+15:07:55.079 10116 [http-nio-auto-1-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:07:55.080 10117 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:07:55.103 10140 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+15:07:55.194 10231 [http-nio-auto-1-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+15:07:55.410 10447 [http-nio-auto-1-exec-1] WARN  rollingFileLogger - Input values max 5 min 5, output value 0
+15:07:55.879 10916 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:07:55.883 10920 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:07:55.885 10922 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:07:55.889 10926 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:08:14.344 345  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.CalculatorApplicationTests], using SpringBootContextLoader
+15:08:14.350 351  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.CalculatorApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.351 352  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.CalculatorApplicationTests]: CalculatorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.485 486  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.CalculatorApplicationTests
+15:08:14.608 609  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.627 628  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@205d38da, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6950ed69, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6dd7b5a3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6f3187b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2663e964, org.springframework.test.context.transaction.TransactionalTestExecutionListener@48b67364, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@189cbd7c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7bf3a5d8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@42e25b0b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@39b43d60, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@44be0077, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2205a05d]
+15:08:14.661 662  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.mockitoTests.RequestLogTest], using SpringBootContextLoader
+15:08:14.663 664  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.mockitoTests.RequestLogTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.663 664  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.mockitoTests.RequestLogTest]: RequestLogTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.696 697  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.mockitoTests.RequestLogTest
+15:08:14.698 699  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.699 700  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57576994, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@616ac46a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@67b9b51a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1205bd62, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7ef27d7f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@490caf5f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6337c201, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5c669da8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@31920ade, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d483de4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4032d386, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@28d18df5]
+15:08:14.701 702  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.mockitoTests.ResponseLogTest], using SpringBootContextLoader
+15:08:14.703 704  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.mockitoTests.ResponseLogTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.703 704  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.mockitoTests.ResponseLogTest]: ResponseLogTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.709 710  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.mockitoTests.ResponseLogTest
+15:08:14.711 712  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.712 713  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@27adc16e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@b83a9be, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2609b277, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1fd14d74, org.springframework.test.context.support.DirtiesContextTestExecutionListener@563e4951, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4066c471, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2b175c00, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3eb81efb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1ae8bcbc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6cdba6dc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7d3d101b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@30c8681]
+15:08:14.717 718  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.IndexControllerTest], using SpringBootContextLoader
+15:08:14.718 719  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.IndexControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.718 719  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.IndexControllerTest]: IndexControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.729 730  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.restAssuredTests.IndexControllerTest
+15:08:14.731 732  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.732 733  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30bce90b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3e6f3f28, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e19ebf0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2474f125, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7357a011, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3406472c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5717c37, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@68f4865, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4816278d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4eaf3684, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@40317ba2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3c01cfa1]
+15:08:14.734 735  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest], using SpringBootContextLoader
+15:08:14.736 737  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.736 737  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest]: calculateControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.739 740  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.controllerTests.restAssuredTests.calculateControllerTest
+15:08:14.741 742  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.742 743  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@b978d10, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5b7a8434, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5c45d770, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2ce6c6ec, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1bae316d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@147a5d08, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6676f6a0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7cbd9d24, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1672fe87, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5026735c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b45c0e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@11f0a5a1]
+15:08:14.745 746  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.serviceTests.RequestServiceTest], using SpringBootContextLoader
+15:08:14.747 748  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.serviceTests.RequestServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.748 749  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.serviceTests.RequestServiceTest]: RequestServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.760 761  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.serviceTests.RequestServiceTest
+15:08:14.762 763  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.762 763  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@53251a66, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6853425f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@352c1b98, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@21129f1f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a9f4771, org.springframework.test.context.transaction.TransactionalTestExecutionListener@282cb7c7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7d898981, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@48d61b48, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@68d279ec, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@258d79be, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@14f9390f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6c0d7c83]
+15:08:14.764 765  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ee.taltech.team7.calculator.serviceTests.ResponseServiceTest], using SpringBootContextLoader
+15:08:14.765 766  [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ee.taltech.team7.calculator.serviceTests.ResponseServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:08:14.766 767  [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ee.taltech.team7.calculator.serviceTests.ResponseServiceTest]: ResponseServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:08:14.769 770  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ee.taltech.team7.calculator.CalculatorApplication for test class ee.taltech.team7.calculator.serviceTests.ResponseServiceTest
+15:08:14.770 771  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:08:14.771 772  [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3e74829, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4f6f416f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3b8f0a79, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71e693fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@48793bef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7d286fb6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3eb77ea8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7b8b43c7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7aaca91a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44c73c26, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@41005828, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@60b4beb4]
+15:08:15.236 1237 [main] INFO  e.t.t.c.CalculatorApplicationTests - Starting CalculatorApplicationTests on loonix with PID 12704 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:08:15.239 1240 [main] INFO  e.t.t.c.CalculatorApplicationTests - No active profile set, falling back to default profiles: default
+15:08:16.780 2781 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:16.868 2869 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77ms. Found 2 repository interfaces.
+15:08:17.577 3578 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0d03261] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:17.682 3683 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$60507f93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:17.955 3956 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:08:18.111 4112 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:08:18.215 4216 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:08:18.286 4287 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.12.Final}
+15:08:18.287 4288 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+15:08:18.411 4412 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+15:08:18.563 4564 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:08:19.143 5144 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@28551755'
+15:08:19.145 5146 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:20.362 6363 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:08:21.107 7108 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:08:21.481 7482 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:08:22.038 8039 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:08:22.693 8694 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:22.707 8708 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:22.740 8741 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:22.889 8890 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:08:22.898 8899 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:08:22.902 8903 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:08:22.904 8905 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:08:22.907 8908 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:08:22.910 8911 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:08:22.913 8914 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:08:22.917 8918 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:08:22.919 8920 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:08:22.921 8922 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:08:22.924 8925 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:08:22.927 8928 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:08:22.930 8931 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:08:22.932 8933 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:08:22.935 8936 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:08:22.940 8941 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:08:22.942 8943 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:08:22.945 8946 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:08:22.947 8948 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:08:22.950 8951 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:08:22.953 8954 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:08:22.955 8956 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:08:22.957 8958 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:08:23.002 9003 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:08:23.039 9040 [main] INFO  e.t.t.c.CalculatorApplicationTests - Started CalculatorApplicationTests in 8.185 seconds (JVM running for 9.495)
+15:08:23.182 9183 [main] INFO  e.t.t.c.c.m.RequestLogTest - Starting RequestLogTest on loonix with PID 12704 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:08:23.183 9184 [main] INFO  e.t.t.c.c.m.RequestLogTest - No active profile set, falling back to default profiles: default
+15:08:23.711 9712 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:23.720 9721 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
+15:08:23.938 9939 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0d03261] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:23.976 9977 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$60507f93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:24.132 10133 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+15:08:24.134 10135 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+15:08:24.154 10155 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:08:24.160 10161 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:08:24.200 10201 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@28551755'
+15:08:24.201 10202 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:24.729 10730 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:08:25.099 11100 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:08:25.269 11270 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:08:25.464 11465 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:08:25.916 11917 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+15:08:25.916 11917 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+15:08:25.935 11936 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 19 ms
+15:08:25.976 11977 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:25.978 11979 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:25.989 11990 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:26.050 12051 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:08:26.059 12060 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:08:26.063 12064 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:08:26.065 12066 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:08:26.067 12068 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:08:26.069 12070 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:08:26.071 12072 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:08:26.074 12075 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:08:26.076 12077 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:08:26.078 12079 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:08:26.080 12081 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:08:26.082 12083 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:08:26.084 12085 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:08:26.086 12087 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:08:26.089 12090 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:08:26.092 12093 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:08:26.095 12096 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:08:26.097 12098 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:08:26.099 12100 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:08:26.101 12102 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:08:26.103 12104 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:08:26.105 12106 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:08:26.106 12107 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:08:26.117 12118 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:08:26.135 12136 [main] INFO  e.t.t.c.c.m.RequestLogTest - Started RequestLogTest in 2.979 seconds (JVM running for 12.591)
+15:08:26.298 12299 [main] INFO  e.t.t.c.c.m.ResponseLogTest - Starting ResponseLogTest on loonix with PID 12704 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:08:26.298 12299 [main] INFO  e.t.t.c.c.m.ResponseLogTest - No active profile set, falling back to default profiles: default
+15:08:26.683 12684 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:26.692 12693 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
+15:08:26.811 12812 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0d03261] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:26.846 12847 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$60507f93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:26.975 12976 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+15:08:26.976 12977 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+15:08:27.024 13025 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:08:27.029 13030 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:08:27.055 13056 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@28551755'
+15:08:27.056 13057 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:27.472 13473 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:08:27.823 13824 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:08:27.989 13990 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:08:28.154 14155 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:08:28.541 14542 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+15:08:28.542 14543 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+15:08:28.553 14554 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 11 ms
+15:08:28.589 14590 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:28.590 14591 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:28.598 14599 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:28.636 14637 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:08:28.641 14642 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:08:28.643 14644 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:08:28.644 14645 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:08:28.645 14646 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:08:28.646 14647 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:08:28.648 14649 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:08:28.649 14650 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:08:28.650 14651 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:08:28.651 14652 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:08:28.652 14653 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:08:28.653 14654 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:08:28.654 14655 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:08:28.655 14656 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:08:28.657 14658 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:08:28.658 14659 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:08:28.660 14661 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:08:28.661 14662 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:08:28.662 14663 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:08:28.663 14664 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:08:28.664 14665 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:08:28.665 14666 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:08:28.666 14667 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:08:28.675 14676 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:08:28.688 14689 [main] INFO  e.t.t.c.c.m.ResponseLogTest - Started ResponseLogTest in 2.409 seconds (JVM running for 15.144)
+15:08:28.739 14740 [main] INFO  e.t.t.c.c.r.IndexControllerTest - Starting IndexControllerTest on loonix with PID 12704 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:08:28.739 14740 [main] INFO  e.t.t.c.c.r.IndexControllerTest - No active profile set, falling back to default profiles: default
+15:08:29.106 15107 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:29.113 15114 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+15:08:29.191 15192 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0d03261] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:29.225 15226 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$60507f93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:29.470 15471 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+15:08:29.495 15496 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+15:08:29.523 15524 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:08:29.523 15524 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+15:08:29.656 15657 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:08:29.656 15657 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 915 ms
+15:08:30.212 16213 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+15:08:30.213 16214 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+15:08:30.226 16227 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:08:30.231 16232 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:08:30.254 16255 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@28551755'
+15:08:30.254 16255 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:30.560 16561 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:08:30.697 16698 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:08:30.859 16860 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:08:30.966 16967 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:08:31.555 17556 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:31.557 17558 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:31.566 17567 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:31.613 17614 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:08:31.619 17620 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:08:31.622 17623 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:08:31.624 17625 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:08:31.625 17626 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:08:31.627 17628 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:08:31.629 17630 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:08:31.631 17632 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:08:31.632 17633 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:08:31.634 17635 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:08:31.635 17636 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:08:31.636 17637 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:08:31.637 17638 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:08:31.639 17640 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:08:31.641 17642 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:08:31.643 17644 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:08:31.645 17646 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:08:31.647 17648 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:08:31.649 17650 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:08:31.651 17652 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:08:31.652 17653 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:08:31.654 17655 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:08:31.656 17657 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:08:31.666 17667 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:08:31.681 17682 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+15:08:31.703 17704 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 40869 (http) with context path ''
+15:08:31.704 17705 [main] INFO  e.t.t.c.c.r.IndexControllerTest - Started IndexControllerTest in 2.992 seconds (JVM running for 18.16)
+15:08:32.645 18646 [http-nio-auto-1-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:08:32.647 18648 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:08:32.665 18666 [http-nio-auto-1-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+15:08:32.938 18939 [http-nio-auto-1-exec-3] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+15:08:33.145 19146 [http-nio-auto-1-exec-3] WARN  rollingFileLogger - Input values max 5 min 5, output value 0
+15:08:33.625 19626 [http-nio-auto-1-exec-5] WARN  rollingFileLogger - Input values max 6 min 1, output value 25
+15:08:33.666 19667 [http-nio-auto-1-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; nested exception is java.lang.NumberFormatException: For input string: "3,5,%00"]
+15:08:33.722 19723 [http-nio-auto-1-exec-7] WARN  rollingFileLogger - Input values max 100 min -10, output value 12100
+15:08:33.765 19766 [http-nio-auto-1-exec-8] WARN  rollingFileLogger - Input values max 5 min 1, output value 16
+15:08:33.803 19804 [main] INFO  e.t.t.c.s.RequestServiceTest - Starting RequestServiceTest on loonix with PID 12704 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:08:33.804 19805 [main] INFO  e.t.t.c.s.RequestServiceTest - No active profile set, falling back to default profiles: default
+15:08:34.214 20215 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:34.224 20225 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10ms. Found 2 repository interfaces.
+15:08:34.393 20394 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0d03261] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:34.428 20429 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$60507f93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:34.564 20565 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+15:08:34.565 20566 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-2"]
+15:08:34.566 20567 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:08:34.566 20567 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+15:08:34.588 20589 [main] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:08:34.589 20590 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 784 ms
+15:08:35.138 21139 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+15:08:35.139 21140 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+15:08:35.154 21155 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:08:35.159 21160 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:08:35.181 21182 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@28551755'
+15:08:35.181 21182 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:35.485 21486 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:08:35.628 21629 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:08:35.781 21782 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:08:35.887 21888 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:08:36.215 22216 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:36.216 22217 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:36.222 22223 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:36.264 22265 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:08:36.270 22271 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:08:36.272 22273 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:08:36.273 22274 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:08:36.274 22275 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:08:36.275 22276 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:08:36.276 22277 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:08:36.277 22278 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:08:36.278 22279 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:08:36.280 22281 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:08:36.282 22283 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:08:36.283 22284 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:08:36.284 22285 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:08:36.286 22287 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:08:36.287 22288 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:08:36.290 22291 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:08:36.291 22292 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:08:36.293 22294 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:08:36.293 22294 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:08:36.294 22295 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:08:36.295 22296 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:08:36.297 22298 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:08:36.298 22299 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:08:36.306 22307 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:08:36.322 22323 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-2"]
+15:08:36.329 22330 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 42339 (http) with context path ''
+15:08:36.330 22331 [main] INFO  e.t.t.c.s.RequestServiceTest - Started RequestServiceTest in 2.548 seconds (JVM running for 22.786)
+15:08:36.362 22363 [main] INFO  e.t.t.c.s.ResponseServiceTest - Starting ResponseServiceTest on loonix with PID 12704 (started by tanveer in /home/tanveer/UniProject/Automated-Testing-ICS0024/ICS0024)
+15:08:36.362 22363 [main] INFO  e.t.t.c.s.ResponseServiceTest - No active profile set, falling back to default profiles: default
+15:08:36.671 22672 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+15:08:36.678 22679 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+15:08:36.785 22786 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0d03261] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:36.822 22823 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$60507f93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:08:36.948 22949 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+15:08:36.948 22949 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-3"]
+15:08:36.949 22950 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:08:36.949 22950 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.26]
+15:08:36.964 22965 [main] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:08:36.964 22965 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 601 ms
+15:08:37.534 23535 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+15:08:37.536 23537 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+15:08:37.558 23559 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+15:08:37.566 23567 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+15:08:37.598 23599 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@28551755'
+15:08:37.598 23599 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:08:37.922 23923 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:08:38.058 24059 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+15:08:38.203 24204 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+15:08:38.300 24301 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:08:38.583 24584 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+15:08:38.585 24586 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+15:08:38.592 24593 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+15:08:38.625 24626 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: greetingUsingGET_1
+15:08:38.629 24630 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+15:08:38.630 24631 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+15:08:38.631 24632 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+15:08:38.632 24633 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+15:08:38.633 24634 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+15:08:38.634 24635 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+15:08:38.635 24636 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+15:08:38.636 24637 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+15:08:38.637 24638 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+15:08:38.638 24639 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+15:08:38.639 24640 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+15:08:38.640 24641 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+15:08:38.641 24642 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+15:08:38.642 24643 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+15:08:38.643 24644 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+15:08:38.644 24645 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+15:08:38.646 24647 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+15:08:38.647 24648 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+15:08:38.648 24649 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+15:08:38.650 24651 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+15:08:38.651 24652 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+15:08:38.652 24653 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+15:08:38.661 24662 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: get_all_requestsUsingGET_1
+15:08:38.674 24675 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-3"]
+15:08:38.681 24682 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 41111 (http) with context path ''
+15:08:38.682 24683 [main] INFO  e.t.t.c.s.ResponseServiceTest - Started ResponseServiceTest in 2.336 seconds (JVM running for 25.138)
+15:08:38.715 24716 [Thread-11] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:08:38.715 24716 [Thread-14] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:08:38.715 24716 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:08:38.723 24724 [Thread-14] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:38.725 24726 [Thread-17] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:08:38.726 24727 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:08:38.727 24728 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:38.727 24728 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:38.733 24734 [Thread-2] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:08:38.733 24734 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+15:08:38.731 24732 [Thread-17] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:38.734 24735 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+15:08:38.736 24737 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+15:08:38.738 24739 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:38.740 24741 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+15:08:38.741 24742 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+15:08:38.741 24742 [Thread-2] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:08:38.752 24753 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:08:38.766 24767 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+15:08:38.766 24767 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+15:08:38.766 24767 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+15:08:38.766 24767 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+15:08:38.768 24769 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+15:08:38.768 24769 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
