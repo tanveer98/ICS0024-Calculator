@@ -20,7 +20,7 @@ build job:
   tags:
     - runner
   script:
-    - ./gradlew bootjar
+    - ./gradlew assemble
 
 deploy job:
   stage: deploy
