@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11-slim
 EXPOSE 40400
 ADD ./build/libs/calc.jar
 ENTRYPOINT [ "java", "-jar", "calc.jar" ]
