@@ -5,7 +5,7 @@ stages:
   - deploy
 
 before_script:
-  - sudo chmod +x ./gradlew
+  - chmod +x ./gradlew
 
 test job:
   stage: test
