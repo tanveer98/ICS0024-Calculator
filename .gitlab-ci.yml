@@ -13,7 +13,7 @@ test job:
   tags:
     - runner
   script:
-    - ./gradlew clean test --debug
+    - ./gradlew clean test --info
 
 build job:
   stage: build
