@@ -8,7 +8,6 @@ stages:
   - deploy
 
 before_script:
-  - pwd
   - chmod +x ./gradlew
 
 test job:
