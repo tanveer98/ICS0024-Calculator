@@ -22,7 +22,6 @@ build job:
   artifacts:
     paths:
       - build/libs
-
   script:
     - ./gradlew bootjar
 
@@ -32,4 +31,3 @@ deploy job:
     - runner
   script:
     - sudo docker-compose up --build
-
