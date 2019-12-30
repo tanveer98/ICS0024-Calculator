@@ -5,15 +5,14 @@ stages:
   - deploy
 
 before_script:
-  - chmod +x ./gradlew
-  - ./gradlew clean
+  - sudo chmod +x ./gradlew
 
 test job:
   stage: test
   tags:
     - runner
   script:
-    - ./gradlew test
+    - ./gradlew clean test
 
 build job:
   stage: build
