@@ -96,6 +96,29 @@ http://localhost:40400/calculate?v=10,20
 1.API documentation  
 http://localhost:40400/swagger
 
+#### Server setting  
+| Setting name/ package name | version / setted contents |
+| -------------------------| ------- |
+| Nginx version| 1.14.0
+| IPv4 listening port| 80
+| IPv6 listening port| 80
+| Document root  | /var/www/html/build
+
+#### Under API setting  
+| setting name | settings |
+| -------------------------| ------- |
+| proxy port  | 8080
+| proxy header (x-foward-for)  |$proxy_add_x_forwarded_for 
+| proxy header (x-foward-proto)  |$scheme
+| proxy header (x-foward-port)  |$server_port
+
+##### Under API : if request method is "GET"  
+/home/mika/Automated-test/calculator/README.md
+| allowed option  | *
+| allowed method | GET, POST, OPTIONS
+| allowed headers | DNT, User-Agent,  X-requested-with, <br> If-method-since,   Cache-control, <br> Cache-Control,Content-Type, Range
+| expose headers  | Content-Length, Content-Range
+
 ## How to expand it:
 The core calculate method takes in a list of integers and finds the min-max values 
 and returns a ResponseDTO object (which is a wrapper around null).
