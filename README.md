@@ -1,15 +1,15 @@
-### Website: https://team7.northeurope.cloudapp.azure.com/ ###
-** Staging Server: 13.53.177.46
-** Production Server: 65.52.229.255
+### Website: https://team7.northeurope.cloudapp.azure.com/
+####  Staging Server access: ec2-user@13.53.177.46
+####  Production Server: mhasan@65.52.229.255 
 
-## Staging Server ##
+## Staging Server
 Staging server has 2 gitlab runners running using the Shell executor, with the tags: 'runner' (for backend)  and 'front-end' (for frontend).
-In order to build and test the backend, the statging server has OpenJDK-11.0.5 installed. (make sure to set up the $JAVA_HOME shell variable in case gradle complains about it)
+In order to build and test the backend, the staging server has OpenJDK-11.0.5 installed. (make sure to set up the _$JAVA_HOME_ shell variable in case gradle complains about it)
 For the front end, the server has nodejs 12-LTS installed (NPM should also be installed with nodejs).
 
 Hardware wise, staging has 3GB of swapfile configured
 
-## Production Server ##
+## Production Server
 The production server only needs to have docker and docker-compose installed. DockerFile has a dependency on jdk11, and docker-compose on postgresSQL
 Each time a change is pushed upstream, the docker container for the backend (but not DB) gets rebuilt from the new jar.
 
@@ -19,25 +19,27 @@ Hardware wise, production has 3GB of swapfile configured.
 | Setting name/ package name | version / setted contents |
 | -------------------------| ------- |
 | Nginx version| 1.14.0
-| IPv4 listening port| 80
-| IPv6 listening port| 80
+| IPv4 listening port| 80, 443 (SSL)
+| IPv6 listening port| 80, 443 (SSL)
 | Document root  | /var/www/html/build
 
 #### Under /api setting ####  
 | setting name | settings |
 | -------------------------| ------- |
 | proxy port  | 8080
-| proxy header (x-foward-for)  |$proxy_add_x_forwarded_for 
-| proxy header (x-foward-proto)  |$scheme
-| proxy header (x-foward-port)  |$server_port
+| proxy_set_header (x-Forwarded-for)  |$proxy_add_x_forwarded_for 
+| proxy_set_header (x-Forwarded-proto)  |$scheme
+| proxy_set_header (x-Forwarded-port)  |$server_port
+These are required for integrated tomcat server
 
 #### Under /api : if request method is "GET"  ####
-
+| setting name | settings |
+| -------------------------| ------- |
 | allowed option  | *
 | allowed method | GET, POST, OPTIONS
 | allowed headers | DNT, User-Agent,  X-requested-with, <br> If-method-since,   Cache-control, <br> Cache-Control,Content-Type, Range
 | expose headers  | Content-Length, Content-Range
-
+This is required for CORS.
 
 # **Calculator project for ICS0024**
 ## Calculation requirement and logic
@@ -52,19 +54,19 @@ Hardware wise, production has 3GB of swapfile configured.
          
 ## Business logic    
 ### Acceptable / Designed inputs
-User enters several values in calculator page in GET request 
- 
-    example : localhost:40400/calculate?v=4,7  ---> returns 9  
-    example : localhost:40400/calculate?v=10,-2, 0 ---> returns 144  
+User enters several values in calculator page in GET request (insert domain name before /)
+
+    example : /c?v=4,7  ---> returns 9  
+    example : /c?v=10,-2, 0 ---> returns 144  
 
 
 ### Exceeding assumptions
 Following inputations are out of design application returns "bad request (HTTP 400)"  
     
-    example : localhost:40400/calculate?v=  
-    example : localhost:40400/calculate?v=1, ,10  
-    example : localhost:40400/calculate?v=abc  
-    example : localhost:40400/calculate?v=1, abc
+    example : /c?v=  
+    example : /c?v=1, ,10  
+    example : /c?v=abc  
+    example : /c?v=1, abc
 
 
 
