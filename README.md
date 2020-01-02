@@ -1,6 +1,6 @@
 ### Website: https://team7.northeurope.cloudapp.azure.com/ ###
-** Staging Server: 13.53.177.46 **
-** Production Server: 65.52.229.255 **
+** Staging Server: 13.53.177.46
+** Production Server: 65.52.229.255
 
 ## Staging Server ##
 Staging server has 2 gitlab runners running using the Shell executor, with the tags: 'runner' (for backend)  and 'front-end' (for frontend).
@@ -31,8 +31,8 @@ Hardware wise, production has 3GB of swapfile configured.
 | proxy header (x-foward-proto)  |$scheme
 | proxy header (x-foward-port)  |$server_port
 
-##### Under /api : if request method is "GET"  ##### 
-/home/mika/Automated-test/calculator/README.md
+#### Under /api : if request method is "GET"  ####
+
 | allowed option  | *
 | allowed method | GET, POST, OPTIONS
 | allowed headers | DNT, User-Agent,  X-requested-with, <br> If-method-since,   Cache-control, <br> Cache-Control,Content-Type, Range
