@@ -1,3 +1,44 @@
+### Website: https://team7.northeurope.cloudapp.azure.com/ ###
+** Staging Server: 13.53.177.46 **
+** Production Server: 65.52.229.255**
+
+##Staging Server
+Staging server has 2 gitlab runners running using the Shell executor, with the tags: 'runner' (for backend)  and 'front-end' (for frontend).
+In order to build and test the backend, the statging server has OpenJDK-11.0.5 installed. (make sure to set up the $JAVA_HOME shell variable in case gradle complains about it)
+For the front end, the server has nodejs 12-LTS installed (NPM should also be installed with nodejs).
+
+Hardware wise, staging has 3GB of swapfile configured
+
+## Production Server
+The production server only needs to have docker and docker-compose installed. DockerFile has a dependency on jdk11, and docker-compose on postgresSQL
+Each time a change is pushed upstream, the docker container for the backend (but not DB) gets rebuilt from the new jar.
+
+Hardware wise, production has 3GB of swapfile configured.
+
+#### Production Server setting  
+| Setting name/ package name | version / setted contents |
+| -------------------------| ------- |
+| Nginx version| 1.14.0
+| IPv4 listening port| 80
+| IPv6 listening port| 80
+| Document root  | /var/www/html/build
+
+#### Under /api setting  
+| setting name | settings |
+| -------------------------| ------- |
+| proxy port  | 8080
+| proxy header (x-foward-for)  |$proxy_add_x_forwarded_for 
+| proxy header (x-foward-proto)  |$scheme
+| proxy header (x-foward-port)  |$server_port
+
+##### Under /api : if request method is "GET"  
+/home/mika/Automated-test/calculator/README.md
+| allowed option  | *
+| allowed method | GET, POST, OPTIONS
+| allowed headers | DNT, User-Agent,  X-requested-with, <br> If-method-since,   Cache-control, <br> Cache-Control,Content-Type, Range
+| expose headers  | Content-Length, Content-Range
+
+
 # **Calculator project for ICS0024**
 ## Calculation requirement and logic
 ### Task title : Square of a distance between min-max
@@ -6,7 +47,8 @@
 3. Square the absolute value and return a result.  
 
 ### API Endpoints:
-    Calculator: /calculate?v={param1}&v={param2}...
+    Calculator: https://team7.northeurope.cloudapp.azure.com/api/c?v={param1}&v={param2}...
+
          
 ## Business logic    
 ### Acceptable / Designed inputs
@@ -96,28 +138,6 @@ http://localhost:40400/calculate?v=10,20
 1.API documentation  
 http://localhost:40400/swagger
 
-#### Server setting  
-| Setting name/ package name | version / setted contents |
-| -------------------------| ------- |
-| Nginx version| 1.14.0
-| IPv4 listening port| 80
-| IPv6 listening port| 80
-| Document root  | /var/www/html/build
-
-#### Under API setting  
-| setting name | settings |
-| -------------------------| ------- |
-| proxy port  | 8080
-| proxy header (x-foward-for)  |$proxy_add_x_forwarded_for 
-| proxy header (x-foward-proto)  |$scheme
-| proxy header (x-foward-port)  |$server_port
-
-##### Under API : if request method is "GET"  
-/home/mika/Automated-test/calculator/README.md
-| allowed option  | *
-| allowed method | GET, POST, OPTIONS
-| allowed headers | DNT, User-Agent,  X-requested-with, <br> If-method-since,   Cache-control, <br> Cache-Control,Content-Type, Range
-| expose headers  | Content-Length, Content-Range
 
 ## How to expand it:
 The core calculate method takes in a list of integers and finds the min-max values 
