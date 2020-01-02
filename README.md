@@ -1,21 +1,21 @@
 ### Website: https://team7.northeurope.cloudapp.azure.com/ ###
 ** Staging Server: 13.53.177.46 **
-** Production Server: 65.52.229.255**
+** Production Server: 65.52.229.255 **
 
-##Staging Server
+## Staging Server ##
 Staging server has 2 gitlab runners running using the Shell executor, with the tags: 'runner' (for backend)  and 'front-end' (for frontend).
 In order to build and test the backend, the statging server has OpenJDK-11.0.5 installed. (make sure to set up the $JAVA_HOME shell variable in case gradle complains about it)
 For the front end, the server has nodejs 12-LTS installed (NPM should also be installed with nodejs).
 
 Hardware wise, staging has 3GB of swapfile configured
 
-## Production Server
+## Production Server ##
 The production server only needs to have docker and docker-compose installed. DockerFile has a dependency on jdk11, and docker-compose on postgresSQL
 Each time a change is pushed upstream, the docker container for the backend (but not DB) gets rebuilt from the new jar.
 
 Hardware wise, production has 3GB of swapfile configured.
 
-#### Production Server setting  
+#### Production Server setting  ####
 | Setting name/ package name | version / setted contents |
 | -------------------------| ------- |
 | Nginx version| 1.14.0
@@ -23,7 +23,7 @@ Hardware wise, production has 3GB of swapfile configured.
 | IPv6 listening port| 80
 | Document root  | /var/www/html/build
 
-#### Under /api setting  
+#### Under /api setting ####  
 | setting name | settings |
 | -------------------------| ------- |
 | proxy port  | 8080
@@ -31,7 +31,7 @@ Hardware wise, production has 3GB of swapfile configured.
 | proxy header (x-foward-proto)  |$scheme
 | proxy header (x-foward-port)  |$server_port
 
-##### Under /api : if request method is "GET"  
+##### Under /api : if request method is "GET"  ##### 
 /home/mika/Automated-test/calculator/README.md
 | allowed option  | *
 | allowed method | GET, POST, OPTIONS
