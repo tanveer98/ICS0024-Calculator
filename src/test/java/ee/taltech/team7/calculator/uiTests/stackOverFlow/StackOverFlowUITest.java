@@ -1,7 +1,7 @@
 package ee.taltech.team7.calculator.uiTests.stackOverFlow;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import lombok.SneakyThrows;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -25,15 +25,13 @@ public class StackOverFlowUITest {
                 .click();
     }
 
-    @SneakyThrows
-    public void go_to_landing() {
+    public void go_to_landing() throws InterruptedException {
         driver.findElement(new By.ByCssSelector("a.-logo"))
                 .click();
         Thread.sleep(500);
     }
 
-    @SneakyThrows
-    public void visit_qa() {
+    public void visit_qa() throws InterruptedException {
         go_to_landing();
         //scroll down to start loading
         JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -47,8 +45,7 @@ public class StackOverFlowUITest {
 
     }
 
-    @SneakyThrows
-    public void view_bounty_qa() {
+    public void view_bounty_qa() throws InterruptedException{
         visit_qa();
         Thread.sleep(500);
         driver
@@ -57,7 +54,7 @@ public class StackOverFlowUITest {
     }
 
     @Test
-    public void view_bountied_ques() {
+    public void view_bountied_ques() throws InterruptedException {
         view_bounty_qa();
         driver
                 .findElement(new By.ByCssSelector("a.question-hyperlink"))
@@ -65,39 +62,36 @@ public class StackOverFlowUITest {
     }
 
 
-    public void ask_some_question() {
+    public void ask_some_question() throws InterruptedException {
         go_to_landing();
         driver.findElement(new By.ByName("q"))
                 .sendKeys("Test" + Keys.RETURN);
 
     }
 
-    @SneakyThrows
-    public void drop_down_menu() {
+    public void drop_down_menu() throws InterruptedException {
         ask_some_question();
         driver.findElement(new By.ByPartialLinkText("More"))
                 .click();
         Thread.sleep(500);
     }
 
-    @SneakyThrows
-    public void click_on_votes() {
+    public void click_on_votes() throws InterruptedException {
         drop_down_menu();
         driver.findElement(new By.ByPartialLinkText("Votes"))
                 .click();
         Thread.sleep(1500);
     }
 
-    @SneakyThrows
     @Test
-    public void click_on_most_voted_ques() {
+    public void click_on_most_voted_ques() throws InterruptedException {
         click_on_votes();
         driver.findElement(new By.ByPartialLinkText("A: Why is processing a sorted array faster than processing an unsorted array?"))
                 .click();
         Thread.sleep(2000);
     }
-    @SneakyThrows
-    public void go_to_business_section() {
+
+    public void go_to_business_section() throws InterruptedException{
         go_to_landing();
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,1600)");
@@ -105,17 +99,15 @@ public class StackOverFlowUITest {
         Thread.sleep(1000);
     }
 
-    @SneakyThrows
-    public void go_to_talent_solution() {
+    public void go_to_talent_solution() throws InterruptedException{
         go_to_business_section();
         driver.findElement(new By.ByPartialLinkText("Talent solutions"))
                 .click();
         Thread.sleep(500);
     }
 
-    @SneakyThrows
     @Test
-    public void go_back_to_landing_from_talent() {
+    public void go_back_to_landing_from_talent() throws InterruptedException {
         go_to_talent_solution();
         driver.findElement(new By.ByCssSelector("a.grid--cell"))
                 .click();
