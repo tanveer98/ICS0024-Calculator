@@ -22,7 +22,7 @@ services:
     links:
       - database
     ports:
-      - 80:40400
+      - 8080:40400
     build:
       context: .
       dockerfile: DockerFile
