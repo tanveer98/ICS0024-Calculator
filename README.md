@@ -1,4 +1,7 @@
-### Website: https://team7.northeurope.cloudapp.azure.com/
+### Website: 
+#### https://team7.northeurope.cloudapp.azure.com/
+#### https://ics-calc-team7.tk/
+
 ####  Staging Server access: ec2-user@13.53.177.46
 ####  Production Server: mhasan@65.52.229.255 
 
