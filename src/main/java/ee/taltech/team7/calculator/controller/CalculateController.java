@@ -22,7 +22,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/c")
+@RequestMapping({"/c", "/c2"})
 public class CalculateController {
 
     @Autowired
